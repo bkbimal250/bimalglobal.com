@@ -1,291 +1,240 @@
-export type CompanyLink = {
-  href: string;
-  label: string;
-};
-
-export type CompanyHeroContent = {
-  eyebrow: string;
-  heading: string;
-  highlight: string;
-  imageAlt: string;
-  imagePath: string;
-  primaryCta: CompanyLink;
-  secondaryCta: CompanyLink;
-  summary: string;
-};
-
-export type CompanyTextSection = {
-  eyebrow: string;
-  heading: string;
-  highlight?: string;
-  paragraphs: string[];
-};
-
-export type CompanyBuildArea = {
-  description: string;
+export type TextBlock = {
   title: string;
+  description: string;
 };
 
-export type CompanyPrinciple = {
-  description: string;
+export type LinkItem = TextBlock & {
+  href: string;
+};
+
+export type ProcessStep = {
   number: string;
   title: string;
-};
-
-export type CompanyCapability = {
-  href: string;
-  title: string;
-};
-
-export type CompanyJourneyItem = {
   description: string;
-  label: string;
-  title: string;
 };
 
-export type CompanyPresenceItem = {
-  description: string;
-  imagePath?: string;
+export type LeadershipProfile = {
   label: string;
+  name: string;
+  role: string;
+  note: string;
+  verified: boolean;
 };
 
-export type CompanyMetric = {
-  label: string;
-  value: string;
-};
-
-export const company = {
-  name: "Bimal Global",
+export const companyOverviewPage = {
   hero: {
-    eyebrow: "About Bimal Global",
-    heading: "Building technology",
-    highlight: "for what comes next.",
+    eyebrow: "Company",
+    title: "Building technology for what comes next.",
     summary:
-      "BIMAL GLOBAL is a technology company focused on designing and building digital products, software systems, platforms, infrastructure, and intelligent solutions for ambitious ideas and complex challenges.",
-    imagePath: "/images/company/company-hero.jpg",
-    imageAlt: "Abstract technology system visual for Bimal Global",
-    primaryCta: {
-      href: "/capabilities",
-      label: "Explore Our Capabilities",
-    },
-    secondaryCta: {
-      href: "/contact",
-      label: "Start a Conversation",
-    },
+      "BIMAL GLOBAL is a technology company focused on designing and building software, digital products, mobile platforms, cloud infrastructure, and AI-enabled solutions around real business and product opportunities.",
+    imagePath: "/images/company/hero.jpg",
+    imageAlt:
+      "Abstract company technology system visual for BIMAL GLOBAL",
+    primaryCta: { href: "/contact", label: "Work With Us" },
+    secondaryCta: { href: "/capabilities", label: "Explore Capabilities" },
   },
-  whoWeAre: {
-    eyebrow: "Who We Are",
-    heading: "A technology company",
-    highlight: "built around possibility.",
+  introduction: {
+    title: "A technology company built around complex problems.",
     paragraphs: [
-      "BIMAL GLOBAL works across engineering, product, infrastructure, mobile platforms, and artificial intelligence. The company is built for challenges where different technology disciplines need to come together with clarity and purpose.",
-      "We are not focused on only one type of product or one narrow category of work. Each opportunity asks for a different mix of strategy, design, systems thinking, and technical execution.",
-      "Long-term technology requires decisions that look beyond launch. We think about how products are built, maintained, improved, and evolved as businesses, users, and markets keep changing.",
+      "Modern businesses increasingly require connected technology rather than isolated websites or individual applications. Digital products, software platforms, mobile applications, internal systems, APIs, cloud infrastructure, and AI-enabled workflows often need to work together.",
+      "The challenge is not simply writing code. It is understanding what should be built and how different technologies should work together.",
     ],
   },
-  philosophy: {
-    heading: "Technology is not the goal.",
-    highlight: "What it makes possible is.",
-    paragraphs: [
-      "Every technical decision should stay connected to real problems, people, products, operations, and the ability to scale over time.",
-    ],
-  },
-  buildAreas: {
-    eyebrow: "What We Build",
-    heading: "From ambitious ideas",
-    highlight: "to complex technology systems.",
-    items: [
-      {
-        title: "Digital Products",
-        description:
-          "Product experiences shaped around user needs, business goals, and practical paths from idea to launch.",
-      },
-      {
-        title: "Software Platforms",
-        description:
-          "Foundational systems designed to support workflows, data, operations, and future product growth.",
-      },
-      {
-        title: "Mobile Applications",
-        description:
-          "Modern mobile experiences for connected users, teams, services, and digital ecosystems.",
-      },
-      {
-        title: "Cloud Infrastructure",
-        description:
-          "Reliable technology foundations for deployment, performance, security, and long-term operation.",
-      },
-      {
-        title: "Artificial Intelligence Systems",
-        description:
-          "Intelligent workflows, automation, and applied AI patterns designed around useful outcomes.",
-      },
-      {
-        title: "Connected Technology Experiences",
-        description:
-          "Integrated product and platform experiences where software, data, infrastructure, and people meet.",
-      },
-    ],
-  },
-  principles: {
-    eyebrow: "How We Think",
-    heading: "Principles behind",
-    highlight: "the work we build.",
-    items: [
-      {
-        number: "01",
-        title: "Think beyond the brief",
-        description:
-          "We look beyond immediate requirements to understand the wider challenge and the system around it.",
-      },
-      {
-        number: "02",
-        title: "Build for change",
-        description:
-          "Technology should be designed with the expectation that products, users, and businesses evolve.",
-      },
-      {
-        number: "03",
-        title: "Engineering matters",
-        description:
-          "Strong ideas need strong technical foundations, from architecture and code quality to deployment and reliability.",
-      },
-      {
-        number: "04",
-        title: "Stay curious",
-        description:
-          "Technology changes quickly. Curiosity helps teams continue learning, adapting, and improving the work.",
-      },
-      {
-        number: "05",
-        title: "Focus on what matters",
-        description:
-          "Complexity should exist only where it creates value for the product, the business, or the people using it.",
-      },
-    ],
-  },
-  ecosystem: {
-    eyebrow: "Our Capabilities",
-    heading: "Different disciplines.",
-    highlight: "One technology ecosystem.",
-    items: [
-      {
-        title: "Software Engineering",
-        href: "/capabilities/software-engineering",
-      },
-      {
-        title: "Product Development",
-        href: "/capabilities/product-development",
-      },
-      {
-        title: "Mobile Platforms",
-        href: "/capabilities/mobile-platforms",
-      },
-      {
-        title: "Cloud & Infrastructure",
-        href: "/capabilities/cloud-infrastructure",
-      },
-      {
-        title: "Artificial Intelligence",
-        href: "/capabilities/artificial-intelligence",
-      },
-    ],
-  },
-  longTerm: {
-    heading: "Technology doesn't stop",
-    highlight: "at launch.",
-    imagePath: "/images/company/long-term.jpg",
-    paragraphs: [
-      "Products evolve. Businesses change. Users grow. Technology needs to keep moving.",
-      "We think about how systems can be built, maintained, improved, and evolved over time, so the work can keep creating value after the first release.",
-    ],
-  },
-  journey: {
-    eyebrow: "Our Journey",
-    heading: "A company journey",
-    highlight: "still being built.",
-    items: [
-      {
-        label: "2024",
-        title: "Foundation",
-        description:
-          "The beginning of an ambition to build technology beyond individual projects.",
-      },
-      {
-        label: "2025",
-        title: "Expansion",
-        description:
-          "Bringing together broader capabilities across product, engineering, infrastructure, and emerging technologies.",
-      },
-      {
-        label: "Next",
-        title: "Building Forward",
-        description:
-          "Developing platforms, products, and technology initiatives with a long-term global outlook.",
-      },
-    ],
-  },
-  presence: {
-    eyebrow: "Our Presence",
-    heading: "Rooted across borders.",
-    highlight: "Built with a global outlook.",
+  technologyView: {
+    title: "Technology works best when it works together.",
     summary:
-      "BIMAL GLOBAL brings together operational presence across India and Nepal with an ambition to work across markets and technology challenges globally.",
-    cta: {
-      href: "/company/presence",
-      label: "Explore Our Presence",
+      "Different projects require different combinations of technology. Some need a focused product and web platform. Others need mobile, infrastructure, integrations, or intelligence as part of the same system.",
+    imagePath: "/images/company/technology-view.jpg",
+    imageAlt:
+      "Conceptual technology view showing product, software, mobile, cloud, and AI connections",
+    flow: [
+      "Business Opportunity",
+      "Product Thinking",
+      "Software Engineering",
+      "Mobile + Cloud + AI",
+      "Connected Digital Product",
+    ],
+  },
+  whyWeExist: [
+    {
+      title: "Build Around Real Needs",
+      description:
+        "Technology should begin with actual users, workflows, and opportunities.",
     },
-    items: [
-      {
-        label: "India",
-        description: "Operational presence and technology delivery.",
-        imagePath: "/images/company/presence/india.jpg",
-      },
-      {
-        label: "Nepal",
-        description: "Operational presence and technology delivery.",
-        imagePath: "/images/company/presence/nepal.jpg",
-      },
-      {
-        label: "Global",
-        description: "A technology outlook designed beyond geographic boundaries.",
-      },
+    {
+      title: "Connect the Bigger Picture",
+      description:
+        "Products, systems, mobile applications, infrastructure, and intelligence often need to work together.",
+    },
+    {
+      title: "Keep Complexity Intentional",
+      description:
+        "Not every problem requires a complicated architecture.",
+    },
+    {
+      title: "Design for Evolution",
+      description:
+        "Technology requirements change as businesses and products grow.",
+    },
+    {
+      title: "Think Beyond the First Release",
+      description:
+        "A product should have room to evolve after launch.",
+    },
+  ] satisfies TextBlock[],
+  buildCategories: [
+    "Digital Products",
+    "Software Platforms",
+    "Mobile Applications",
+    "SaaS Products",
+    "Marketplaces",
+    "Business Systems",
+    "Internal Tools",
+    "APIs & Backend Systems",
+    "Media & Content Platforms",
+    "AI-Enabled Products",
+  ],
+  approach: [
+    {
+      number: "01",
+      title: "Understand",
+      description:
+        "Understand the business context, users, workflows, and technology requirements.",
+    },
+    {
+      number: "02",
+      title: "Define",
+      description: "Define what needs to be built and why.",
+    },
+    {
+      number: "03",
+      title: "Design",
+      description:
+        "Shape the product, workflows, and technology direction.",
+    },
+    {
+      number: "04",
+      title: "Build",
+      description: "Develop the software and connected systems.",
+    },
+    {
+      number: "05",
+      title: "Launch",
+      description: "Prepare technology for real-world use.",
+    },
+    {
+      number: "06",
+      title: "Evolve",
+      description:
+        "Improve as requirements and opportunities change.",
+    },
+  ] satisfies ProcessStep[],
+  businessTypes: [
+    {
+      title: "Startups & New Products",
+      description:
+        "For teams building something new across MVPs, product development, platforms, and scalable foundations.",
+    },
+    {
+      title: "Growing Businesses",
+      description:
+        "For businesses expanding product capabilities, mobile applications, workflow systems, and integrations.",
+    },
+    {
+      title: "Established Organizations",
+      description:
+        "For organizations evolving larger technology systems through software modernization, connected systems, infrastructure, and internal platforms.",
+    },
+  ] satisfies TextBlock[],
+  globalView: {
+    title: "Built across markets. Thinking beyond borders.",
+    imagePath: "/images/company/global-view.jpg",
+    imageAlt:
+      "Abstract connected markets visual representing India, Nepal, and broader technology ambition",
+    paragraphs: [
+      "BIMAL GLOBAL serves India and Nepal while maintaining a broader perspective on digital products and technology.",
+      "Different markets, users, local business contexts, mobile-first experiences, regional requirements, and international scalability can all influence how technology should be designed.",
+      "Good technology can begin with a local understanding and still be designed for a much broader future.",
     ],
   },
   leadership: {
-    eyebrow: "Leadership",
-    heading: "Direction begins",
-    highlight: "with people.",
-    founderName: "Bimal Vishwakarma",
-    founderRole: "Founder & CEO",
-    imagePath: "/images/company/leadership/bimal-vishwakarma.jpg",
-    imageAlt: "Portrait of Bimal Vishwakarma",
+    title: "The people building BIMAL GLOBAL.",
+    imagePath: "/images/company/leadership.jpg",
+    imageAlt: "Abstract leadership and company direction visual",
     summary:
-      "Leading BIMAL GLOBAL with a focus on building ambitious technology products, platforms, and systems for long-term impact.",
-    teamNote: "Building with a founding team across technology and product.",
-    cta: {
-      href: "/company/leadership",
-      label: "Meet Our Leadership",
-    },
+      "BIMAL GLOBAL has three founders. Public founder details can be expanded as verified leadership content becomes available.",
+    profiles: [
+      {
+        label: "Verified Profile",
+        name: "Bimal Vishwakarma",
+        role: "CEO",
+        note: "Verified leadership information available in the project.",
+        verified: true,
+      },
+      {
+        label: "Replaceable Profile",
+        name: "Founder profile",
+        role: "Founder",
+        note: "Content placeholder. Name and biography should be added only when verified.",
+        verified: false,
+      },
+      {
+        label: "Replaceable Profile",
+        name: "Founder profile",
+        role: "Founder",
+        note: "Content placeholder. Name and biography should be added only when verified.",
+        verified: false,
+      },
+    ] satisfies LeadershipProfile[],
   },
-  metrics: [
-    { value: "5", label: "Core Technology Capabilities" },
-    { value: "2", label: "Operational Markets" },
-    { value: "3", label: "Founders" },
-    { value: "Global", label: "Technology Outlook" },
-  ],
-  cta: {
-    heading: "Let's build",
-    highlight: "what comes next.",
-    summary:
-      "Whether you are developing a new idea, evolving a product, or solving a complex technology challenge, BIMAL GLOBAL is built to explore what is possible.",
-    primaryCta: {
-      href: "/contact",
-      label: "Start a Project",
+  longTerm: {
+    title: "Building for the next generation of digital products.",
+    paragraphs: [
+      "BIMAL GLOBAL is building toward more connected digital products, mobile-first experiences, AI-enabled software, cloud-based systems, global product opportunities, and new technology platforms.",
+      "The technologies will change. The need to build useful, reliable, and evolving products will remain.",
+    ],
+  },
+  principles: [
+    { title: "Solve the real problem", description: "Strong technology begins with the actual need, not the appearance of complexity." },
+    { title: "Build with purpose", description: "Every product, system, and workflow should have a clear reason to exist." },
+    { title: "Keep systems understandable", description: "Readable systems are easier to operate, improve, and extend." },
+    { title: "Connect technology thoughtfully", description: "Software, mobile, cloud, and AI should work together when the product needs them to." },
+    { title: "Design for change", description: "Technology should be ready to evolve as business requirements change." },
+    { title: "Use intelligence intentionally", description: "AI should create meaningful product or workflow value." },
+    { title: "Focus on long-term value", description: "A system should matter beyond the first release." },
+  ] satisfies TextBlock[],
+  explore: [
+    {
+      title: "Leadership",
+      description: "Meet the verified and future-ready leadership structure behind BIMAL GLOBAL.",
+      href: "/company/leadership",
     },
-    secondaryCta: {
+    {
+      title: "Presence",
+      description: "Explore the company's India, Nepal, and broader technology outlook.",
+      href: "/company/presence",
+    },
+    {
+      title: "Capabilities",
+      description: "See the technology disciplines that shape BIMAL GLOBAL's work.",
       href: "/capabilities",
-      label: "Explore Our Capabilities",
     },
+    {
+      title: "Industries",
+      description: "Explore where different technology needs can appear across markets.",
+      href: "/industries",
+    },
+    {
+      title: "Work",
+      description: "Review the product and platform types BIMAL GLOBAL can build.",
+      href: "/work",
+    },
+  ] satisfies LinkItem[],
+  finalCta: {
+    title: "Let's build what comes next.",
+    summary:
+      "Whether you are exploring a new product, improving an existing system, or building a larger technology platform, BIMAL GLOBAL can help bring product thinking and engineering together.",
+    primaryCta: { href: "/contact", label: "Start a Conversation" },
+    secondaryCta: { href: "/work", label: "Explore Our Work" },
   },
 } as const;

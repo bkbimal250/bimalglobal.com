@@ -1,40 +1,48 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
+import { capabilitiesPage, type Capability } from "@/content/capabilities";
 import {
-  company,
-  type CompanyBuildArea,
-  type CompanyCapability,
-  type CompanyJourneyItem,
-  type CompanyMetric,
-  type CompanyPresenceItem,
-  type CompanyPrinciple,
+  companyOverviewPage,
+  type LeadershipProfile,
+  type LinkItem,
+  type ProcessStep,
+  type TextBlock,
 } from "@/content/company";
+
+export const metadata: Metadata = {
+  title: "Company | BIMAL GLOBAL",
+  description:
+    "Learn about BIMAL GLOBAL, a technology company building software, digital products, mobile platforms, cloud infrastructure, and AI-enabled solutions for businesses and products across markets.",
+};
 
 export default function CompanyPage() {
   return (
     <main className="overflow-hidden bg-[#f7f7f2] text-[#171817]">
-      <CompanyHero />
-      <WhoWeAre />
-      <Philosophy />
-      <WhatWeBuild />
-      <Principles />
-      <TechnologyEcosystem />
-      <LongTerm />
-      <Journey />
-      <Presence />
+      <Hero />
+      <Introduction />
+      <Capabilities />
+      <TechnologyView />
+      <WhyWeExist />
+      <BuildCategories />
+      <Approach />
+      <BusinessTypes />
+      <GlobalView />
       <LeadershipPreview />
-      <CompanyNumbers />
-      <CompanyCta />
+      <LongTermDirection />
+      <CompanyPrinciples />
+      <ExploreCompany />
+      <FinalCta />
     </main>
   );
 }
 
-function CompanyHero() {
-  const { hero } = company;
+function Hero() {
+  const { hero } = companyOverviewPage;
 
   return (
     <section
-      aria-labelledby="company-hero-title"
+      aria-labelledby="company-title"
       className="relative isolate px-6 pb-20 pt-32 sm:px-10 sm:pb-28 sm:pt-36 lg:px-16 lg:pb-36 lg:pt-44"
     >
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(24rem,0.8fr)] lg:items-center lg:gap-20 xl:gap-28">
@@ -43,65 +51,46 @@ function CompanyHero() {
             {hero.eyebrow}
           </p>
           <h1
-            id="company-hero-title"
-            className="mt-7 font-serif text-[clamp(3.5rem,8vw,8.75rem)] leading-[0.9] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+            className="mt-7 font-serif text-[clamp(3.35rem,7.8vw,8.5rem)] leading-[0.9] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+            id="company-title"
           >
-            {hero.heading}
-            <span className="block text-[#e35d3f]">{hero.highlight}</span>
+            {hero.title}
           </h1>
           <p className="mt-9 max-w-2xl font-sans text-lg leading-8 text-[#171817]/68 sm:text-xl sm:leading-9 motion-safe:animate-[hero-rise_800ms_220ms_ease-out_both]">
             {hero.summary}
           </p>
           <div className="mt-10 flex flex-col gap-3 font-sans text-sm font-semibold sm:flex-row motion-safe:animate-[hero-rise_800ms_320ms_ease-out_both]">
-            <Link
-              className="inline-flex min-h-12 items-center justify-center bg-[#171817] px-6 text-[#f7f7f2] transition-colors hover:bg-[#e35d3f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817]"
-              href={hero.primaryCta.href}
-            >
-              {hero.primaryCta.label}
-              <span aria-hidden="true" className="ml-8 text-lg leading-none">
-                &rarr;
-              </span>
-            </Link>
-            <Link
-              className="inline-flex min-h-12 items-center justify-center border border-[#171817]/25 px-6 text-[#171817] transition-colors hover:border-[#171817] hover:bg-[#171817]/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817]"
-              href={hero.secondaryCta.href}
-            >
-              {hero.secondaryCta.label}
-              <span aria-hidden="true" className="ml-8 text-lg leading-none">
-                &rarr;
-              </span>
-            </Link>
+            <PrimaryLink href={hero.primaryCta.href} label={hero.primaryCta.label} />
+            <SecondaryLink href={hero.secondaryCta.href} label={hero.secondaryCta.label} />
           </div>
         </div>
-
         <VisualPanel
           alt={hero.imageAlt}
           imagePath={hero.imagePath}
-          label="Company system"
-          meta="Strategy / Product / Engineering"
+          label="Company"
+          meta="Product / Engineering / Systems"
         />
       </div>
     </section>
   );
 }
 
-function WhoWeAre() {
-  const { whoWeAre } = company;
+function Introduction() {
+  const { introduction } = companyOverviewPage;
 
   return (
     <section
-      aria-labelledby="who-we-are-title"
+      aria-labelledby="company-introduction-title"
       className="px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36"
     >
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-12 border-y border-[#171817]/15 py-14 lg:grid-cols-[minmax(0,0.78fr)_minmax(24rem,0.72fr)] lg:gap-20 lg:py-20">
         <SectionHeading
-          eyebrow={whoWeAre.eyebrow}
-          heading={whoWeAre.heading}
-          highlight={whoWeAre.highlight}
-          id="who-we-are-title"
+          eyebrow="Company Introduction"
+          id="company-introduction-title"
+          title={introduction.title}
         />
         <div className="grid gap-7 self-end font-sans text-base leading-8 text-[#171817]/68 sm:text-lg sm:leading-9">
-          {whoWeAre.paragraphs.map((paragraph) => (
+          {introduction.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
@@ -110,110 +99,23 @@ function WhoWeAre() {
   );
 }
 
-function Philosophy() {
-  const { philosophy } = company;
-
-  return (
-    <section className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36">
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.45fr)] lg:items-end lg:gap-20">
-        <p className="font-serif text-[clamp(3rem,8vw,8rem)] leading-[0.9] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
-          {philosophy.heading}
-          <span className="block text-[#e35d3f]">{philosophy.highlight}</span>
-        </p>
-        <div className="border-l border-[#f7f7f2]/20 pl-6 motion-safe:animate-[hero-rise_800ms_160ms_ease-out_both]">
-          {philosophy.paragraphs.map((paragraph) => (
-            <p
-              className="max-w-md font-sans text-lg leading-8 text-[#f7f7f2]/68 sm:text-xl sm:leading-9"
-              key={paragraph}
-            >
-              {paragraph}
-            </p>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function WhatWeBuild() {
-  const { buildAreas } = company;
-
+function Capabilities() {
   return (
     <section
-      aria-labelledby="what-we-build-title"
-      className="px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36"
-    >
-      <div className="mx-auto w-full max-w-[1440px]">
-        <div className="grid grid-cols-1 gap-10 border-b border-[#171817]/15 pb-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(22rem,0.72fr)] lg:gap-20 lg:pb-20">
-          <SectionHeading
-            eyebrow={buildAreas.eyebrow}
-            heading={buildAreas.heading}
-            highlight={buildAreas.highlight}
-            id="what-we-build-title"
-          />
-          <p className="max-w-xl self-end font-sans text-lg leading-8 text-[#171817]/68 sm:text-xl sm:leading-9 motion-safe:animate-[hero-rise_800ms_220ms_ease-out_both]">
-            BIMAL GLOBAL connects product thinking with practical technology
-            execution across the systems companies need to build, launch, and
-            evolve.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 border-t border-[#171817]/15 lg:grid-cols-2">
-          {buildAreas.items.map((item, index) => (
-            <BuildAreaItem index={index} item={item} key={item.title} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function BuildAreaItem({
-  index,
-  item,
-}: {
-  index: number;
-  item: CompanyBuildArea;
-}) {
-  return (
-    <article
-      className="group grid gap-5 border-b border-[#171817]/15 py-8 transition-colors hover:border-[#e35d3f]/60 hover:bg-[#171817]/[0.025] sm:grid-cols-[minmax(0,0.55fr)_minmax(0,1fr)_auto] sm:gap-8 sm:py-10 lg:px-5 motion-safe:animate-[hero-rise_800ms_ease-out_both]"
-      style={{ animationDelay: `${220 + index * 70}ms` }}
-    >
-      <h3 className="font-serif text-[clamp(2rem,4vw,4rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
-        {item.title}
-      </h3>
-      <p className="max-w-xl font-sans text-sm leading-7 text-[#171817]/62 sm:text-base sm:leading-8">
-        {item.description}
-      </p>
-      <span className="font-sans text-2xl leading-none text-[#e35d3f] transition-transform duration-300 group-hover:translate-x-2">
-        &rarr;
-      </span>
-    </article>
-  );
-}
-
-function Principles() {
-  const { principles } = company;
-
-  return (
-    <section
-      aria-labelledby="principles-title"
-      className="bg-[#f7f7f2] px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16 lg:pb-36"
+      aria-labelledby="company-capabilities-title"
+      className="px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16 lg:pb-36"
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <SectionHeading
-          eyebrow={principles.eyebrow}
-          heading={principles.heading}
-          highlight={principles.highlight}
-          id="principles-title"
+          eyebrow="What BIMAL GLOBAL Does"
+          id="company-capabilities-title"
+          title="From product ideas to technology systems."
         />
-        <div className="mt-12 divide-y divide-[#171817]/15 border-y border-[#171817]/15 lg:mt-16">
-          {principles.items.map((principle, index) => (
-            <PrincipleItem
-              index={index}
-              key={principle.number}
-              principle={principle}
+        <div className="mt-12 grid grid-cols-1 border-t border-[#171817]/15 lg:grid-cols-2">
+          {capabilitiesPage.capabilities.map((capability, index) => (
+            <CapabilityItem
+              capability={capability}
+              key={capability.id}
             />
           ))}
         </div>
@@ -222,67 +124,70 @@ function Principles() {
   );
 }
 
-function PrincipleItem({
-  index,
-  principle,
+function CapabilityItem({
+  capability,
 }: {
-  index: number;
-  principle: CompanyPrinciple;
+  capability: Capability;
 }) {
   return (
-    <article
-      className="grid gap-5 py-8 sm:grid-cols-[6rem_minmax(14rem,0.5fr)_minmax(0,1fr)] sm:gap-10 sm:py-10 motion-safe:animate-[hero-rise_800ms_ease-out_both]"
-      style={{ animationDelay: `${180 + index * 70}ms` }}
+    <Link
+      className="group grid gap-5 border-b border-[#171817]/15 py-8 transition-colors hover:border-[#e35d3f]/60 hover:bg-[#171817]/[0.025] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e35d3f] sm:grid-cols-[5rem_minmax(0,0.55fr)_minmax(0,1fr)] sm:gap-8 sm:py-10 lg:px-5"
+      href={capability.href}
     >
       <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
-        {principle.number}
+        {capability.number}
       </p>
-      <h3 className="font-serif text-[clamp(2.1rem,4vw,4.25rem)] leading-none tracking-[-0.04em]">
-        {principle.title}
+      <h3 className="font-serif text-[clamp(2rem,4vw,4rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+        {capability.title}
       </h3>
-      <p className="max-w-2xl self-end font-sans text-sm leading-7 text-[#171817]/64 sm:text-base sm:leading-8">
-        {principle.description}
-      </p>
-    </article>
+      <div>
+        <p className="max-w-xl font-sans text-sm leading-7 text-[#171817]/62 sm:text-base sm:leading-8">
+          {capability.description}
+        </p>
+        <p className="mt-5 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#171817]/42">
+          Explore capability
+          <span aria-hidden="true" className="ml-4 text-[#e35d3f]">
+            &rarr;
+          </span>
+        </p>
+      </div>
+    </Link>
   );
 }
 
-function TechnologyEcosystem() {
-  const { ecosystem } = company;
+function TechnologyView() {
+  const { technologyView } = companyOverviewPage;
 
   return (
     <section
-      aria-labelledby="ecosystem-title"
+      aria-labelledby="technology-view-title"
       className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36"
     >
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.7fr)_minmax(24rem,0.85fr)] lg:items-center lg:gap-20 xl:gap-28">
-        <SectionHeading
-          eyebrow={ecosystem.eyebrow}
-          heading={ecosystem.heading}
-          highlight={ecosystem.highlight}
-          id="ecosystem-title"
-          inverted
-        />
-        <div className="relative min-h-[34rem] overflow-hidden border border-[#f7f7f2]/15 bg-[#202320] p-6 motion-safe:animate-[hero-reveal_1000ms_180ms_ease-out_both] sm:p-8">
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(247,247,242,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(247,247,242,0.1)_1px,transparent_1px)] [background-size:3rem_3rem]"
+      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.7fr)_minmax(24rem,0.82fr)] lg:items-center lg:gap-20">
+        <div>
+          <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
+            Our Technology View
+          </p>
+          <h2
+            className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+            id="technology-view-title"
+          >
+            {technologyView.title}
+          </h2>
+          <p className="mt-8 max-w-2xl font-sans text-lg leading-8 text-[#f7f7f2]/66 sm:text-xl sm:leading-9">
+            {technologyView.summary}
+          </p>
+        </div>
+        <div>
+          <VisualPanel
+            alt={technologyView.imageAlt}
+            imagePath={technologyView.imagePath}
+            label="Technology view"
+            meta="Connected disciplines"
+            tall
           />
-          <div className="relative grid min-h-[30rem] place-items-center">
-            <div className="absolute left-1/2 top-1/2 h-56 w-56 -translate-x-1/2 -translate-y-1/2 border border-[#f7f7f2]/20 sm:h-72 sm:w-72" />
-            <div className="absolute left-1/2 top-1/2 h-36 w-36 -translate-x-1/2 -translate-y-1/2 border border-[#e35d3f]/60 sm:h-44 sm:w-44" />
-            <p className="relative z-10 max-w-36 text-center font-sans text-xs font-semibold uppercase leading-5 tracking-[0.24em] text-[#f7f7f2]">
-              Bimal Global
-            </p>
-            <div className="absolute inset-0 grid grid-cols-1 content-between gap-4 sm:grid-cols-2">
-              {ecosystem.items.map((item, index) => (
-                <CapabilityNode
-                  index={index}
-                  item={item}
-                  key={item.href}
-                />
-              ))}
-            </div>
+          <div className="mt-5">
+            <LayerDiagram dark layers={technologyView.flow} />
           </div>
         </div>
       </div>
@@ -290,49 +195,179 @@ function TechnologyEcosystem() {
   );
 }
 
-function CapabilityNode({
-  index,
-  item,
-}: {
-  index: number;
-  item: CompanyCapability;
-}) {
+function WhyWeExist() {
   return (
-    <Link
-      className="group flex min-h-20 items-center justify-between gap-4 border border-[#f7f7f2]/14 bg-[#171817]/60 px-5 py-4 font-sans text-sm font-semibold text-[#f7f7f2]/72 outline-none transition-colors hover:border-[#e35d3f]/70 hover:text-[#f7f7f2] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e35d3f] motion-safe:animate-[hero-rise_800ms_ease-out_both]"
-      href={item.href}
-      style={{ animationDelay: `${220 + index * 80}ms` }}
+    <section
+      aria-labelledby="why-we-exist-title"
+      className="px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36"
     >
-      {item.title}
-      <span
-        aria-hidden="true"
-        className="text-lg leading-none text-[#e35d3f] transition-transform duration-300 group-hover:translate-x-2 group-focus-visible:translate-x-2"
-      >
-        &rarr;
-      </span>
-    </Link>
+      <div className="mx-auto w-full max-w-[1440px]">
+        <SectionHeading
+          eyebrow="Why We Exist"
+          id="why-we-exist-title"
+          title="Technology should create possibilities, not unnecessary complexity."
+        />
+        <div className="mt-12 grid grid-cols-1 border-t border-[#171817]/15 lg:grid-cols-2">
+          {companyOverviewPage.whyWeExist.map((item, index) => (
+            <EditorialItem index={index} item={item} key={item.title} />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
-function LongTerm() {
-  const { longTerm } = company;
+function BuildCategories() {
+  return (
+    <section
+      aria-labelledby="technology-forms-title"
+      className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36"
+    >
+      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 border-y border-[#f7f7f2]/15 py-14 lg:grid-cols-[minmax(0,0.58fr)_minmax(24rem,1fr)] lg:gap-20 lg:py-20">
+        <div>
+          <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
+            What We Can Help Build
+          </p>
+          <h2
+            className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+            id="technology-forms-title"
+          >
+            Technology can take many forms.
+          </h2>
+          <Link
+            className="mt-9 inline-flex min-h-12 w-fit items-center justify-center border border-[#f7f7f2]/25 px-6 font-sans text-sm font-semibold text-[#f7f7f2] transition-colors hover:border-[#e35d3f] hover:bg-[#e35d3f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f7f7f2]"
+            href="/work"
+          >
+            Explore Our Work
+            <span aria-hidden="true" className="ml-8 text-lg leading-none">
+              &rarr;
+            </span>
+          </Link>
+        </div>
+        <TagCloud dark items={companyOverviewPage.buildCategories} />
+      </div>
+    </section>
+  );
+}
+
+function Approach() {
+  return (
+    <section
+      aria-labelledby="company-approach-title"
+      className="px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36"
+    >
+      <div className="mx-auto w-full max-w-[1440px]">
+        <SectionHeading
+          eyebrow="Our Approach"
+          id="company-approach-title"
+          title="Understand. Build. Learn. Evolve."
+        />
+        <div className="mt-12 grid grid-cols-1 border-y border-[#171817]/15 lg:mt-16 lg:grid-cols-3">
+          {companyOverviewPage.approach.map((step, index) => (
+            <ProcessCard index={index} key={step.number} step={step} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ProcessCard({ index, step }: { index: number; step: ProcessStep }) {
+  return (
+    <article
+      className="border-b border-[#171817]/15 py-8 lg:border-r lg:px-8 lg:py-10 lg:[&:nth-child(3n)]:border-r-0 motion-safe:animate-[hero-rise_800ms_ease-out_both]"
+      style={{ animationDelay: `${160 + index * 60}ms` }}
+    >
+      <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
+        {step.number}
+      </p>
+      <h3 className="mt-8 font-serif text-[clamp(2.35rem,4.6vw,4.75rem)] leading-none tracking-[-0.04em]">
+        {step.title}
+      </h3>
+      <p className="mt-6 max-w-md font-sans text-sm leading-7 text-[#171817]/64 sm:text-base sm:leading-8">
+        {step.description}
+      </p>
+    </article>
+  );
+}
+
+function BusinessTypes() {
+  return (
+    <section
+      aria-labelledby="business-types-title"
+      className="px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16 lg:pb-36"
+    >
+      <div className="mx-auto w-full max-w-[1440px]">
+        <div className="grid grid-cols-1 gap-10 border-b border-[#171817]/15 pb-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(22rem,0.55fr)] lg:items-end lg:gap-20 lg:pb-20">
+          <SectionHeading
+            eyebrow="Built For Different Types Of Businesses"
+            id="business-types-title"
+            title="Technology requirements change with the business."
+          />
+          <Link
+            className="inline-flex min-h-12 w-fit items-center justify-center border border-[#171817]/25 px-6 font-sans text-sm font-semibold text-[#171817] transition-colors hover:border-[#171817] hover:bg-[#171817]/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817]"
+            href="/industries"
+          >
+            Explore Industries
+            <span aria-hidden="true" className="ml-8 text-lg leading-none">
+              &rarr;
+            </span>
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 border-y border-[#171817]/15 lg:mt-16 lg:grid-cols-3">
+          {companyOverviewPage.businessTypes.map((item, index) => (
+            <BusinessCard index={index} item={item} key={item.title} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function BusinessCard({ index, item }: { index: number; item: TextBlock }) {
+  return (
+    <article className="border-b border-[#171817]/15 py-8 lg:border-b-0 lg:border-r lg:px-8 lg:py-10 lg:last:border-r-0">
+      <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
+        0{index + 1}
+      </p>
+      <h3 className="mt-8 font-serif text-[clamp(2.45rem,5vw,5rem)] leading-none tracking-[-0.04em]">
+        {item.title}
+      </h3>
+      <p className="mt-7 font-sans text-sm leading-7 text-[#171817]/64 sm:text-base sm:leading-8">
+        {item.description}
+      </p>
+    </article>
+  );
+}
+
+function GlobalView() {
+  const { globalView } = companyOverviewPage;
 
   return (
-    <section className="px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36">
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(22rem,0.55fr)] lg:items-end lg:gap-16">
+    <section
+      aria-labelledby="company-global-view-title"
+      className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36"
+    >
+      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.82fr)_minmax(22rem,0.62fr)] lg:items-end lg:gap-16">
         <VisualPanel
-          imagePath={longTerm.imagePath}
-          label="Long-term systems"
-          meta="Build / Maintain / Evolve"
+          alt={globalView.imageAlt}
+          imagePath={globalView.imagePath}
+          label="India / Nepal"
+          meta="Global view"
           tall
         />
-        <div className="border-y border-[#171817]/15 py-12 sm:py-16 lg:py-20">
-          <h2 className="font-serif text-[clamp(3rem,7vw,7rem)] leading-[0.92] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
-            {longTerm.heading}
-            <span className="block text-[#e35d3f]">{longTerm.highlight}</span>
+        <div className="border-y border-[#f7f7f2]/15 py-12 sm:py-16 lg:py-20">
+          <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
+            India, Nepal, And A Global View
+          </p>
+          <h2
+            className="mt-7 font-serif text-[clamp(2.85rem,6vw,6.6rem)] leading-[0.94] tracking-[-0.045em]"
+            id="company-global-view-title"
+          >
+            {globalView.title}
           </h2>
-          <div className="mt-8 grid gap-6 font-sans text-lg leading-8 text-[#171817]/66 sm:text-xl sm:leading-9">
-            {longTerm.paragraphs.map((paragraph) => (
+          <div className="mt-8 grid gap-6 font-sans text-lg leading-8 text-[#f7f7f2]/66 sm:text-xl sm:leading-9">
+            {globalView.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
           </div>
@@ -342,192 +377,38 @@ function LongTerm() {
   );
 }
 
-function Journey() {
-  const { journey } = company;
-
-  return (
-    <section
-      aria-labelledby="journey-title"
-      className="px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16 lg:pb-36"
-    >
-      <div className="mx-auto w-full max-w-[1440px]">
-        <SectionHeading
-          eyebrow={journey.eyebrow}
-          heading={journey.heading}
-          highlight={journey.highlight}
-          id="journey-title"
-        />
-        <div className="mt-12 grid grid-cols-1 border-y border-[#171817]/15 lg:mt-16 lg:grid-cols-3">
-          {journey.items.map((item, index) => (
-            <JourneyItem index={index} item={item} key={item.title} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function JourneyItem({
-  index,
-  item,
-}: {
-  index: number;
-  item: CompanyJourneyItem;
-}) {
-  return (
-    <article
-      className="border-b border-[#171817]/15 py-8 lg:border-b-0 lg:border-r lg:px-8 lg:py-10 lg:last:border-r-0 motion-safe:animate-[hero-rise_800ms_ease-out_both]"
-      style={{ animationDelay: `${180 + index * 90}ms` }}
-    >
-      <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
-        {item.label}
-      </p>
-      <h3 className="mt-8 font-serif text-[clamp(2.5rem,5vw,5.25rem)] leading-none tracking-[-0.04em]">
-        {item.title}
-      </h3>
-      <p className="mt-7 max-w-md font-sans text-sm leading-7 text-[#171817]/64 sm:text-base sm:leading-8">
-        {item.description}
-      </p>
-    </article>
-  );
-}
-
-function Presence() {
-  const { presence } = company;
-
-  return (
-    <section
-      aria-labelledby="presence-title"
-      className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36"
-    >
-      <div className="mx-auto w-full max-w-[1440px]">
-        <div className="grid grid-cols-1 gap-10 border-b border-[#f7f7f2]/15 pb-14 lg:grid-cols-[minmax(0,0.95fr)_minmax(22rem,0.72fr)] lg:gap-20 lg:pb-20">
-          <SectionHeading
-            eyebrow={presence.eyebrow}
-            heading={presence.heading}
-            highlight={presence.highlight}
-            id="presence-title"
-            inverted
-          />
-          <div className="self-end">
-            <p className="max-w-xl font-sans text-lg leading-8 text-[#f7f7f2]/68 sm:text-xl sm:leading-9">
-              {presence.summary}
-            </p>
-            <Link
-              className="mt-8 inline-flex min-h-12 w-fit items-center justify-center border border-[#f7f7f2]/28 px-6 font-sans text-sm font-semibold text-[#f7f7f2] transition-colors hover:border-[#e35d3f] hover:bg-[#e35d3f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e35d3f]"
-              href={presence.cta.href}
-            >
-              {presence.cta.label}
-              <span aria-hidden="true" className="ml-8 text-lg leading-none">
-                &rarr;
-              </span>
-            </Link>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 gap-8 pt-12 lg:grid-cols-3 lg:pt-16">
-          {presence.items.map((item, index) => (
-            <PresenceItem index={index} item={item} key={item.label} />
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function PresenceItem({
-  index,
-  item,
-}: {
-  index: number;
-  item: CompanyPresenceItem;
-}) {
-  return (
-    <article
-      className="relative min-h-[24rem] overflow-hidden border border-[#f7f7f2]/15 bg-[#202320] p-7 motion-safe:animate-[hero-reveal_900ms_ease-out_both] sm:p-8"
-      data-image-path={item.imagePath}
-      style={{
-        animationDelay: `${180 + index * 90}ms`,
-        backgroundImage: item.imagePath
-          ? `linear-gradient(145deg, rgba(23, 24, 23, 0.16), rgba(23, 24, 23, 0.9)), url(${item.imagePath})`
-          : undefined,
-        backgroundPosition: "center",
-        backgroundSize: "cover",
-      }}
-    >
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(247,247,242,0.18)_1px,transparent_1px),linear-gradient(90deg,rgba(247,247,242,0.1)_1px,transparent_1px)] [background-size:3rem_3rem]"
-      />
-      <div className="relative z-10 flex h-full min-h-[20rem] flex-col justify-between">
-        <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
-          {item.label}
-        </p>
-        <div>
-          <h3 className="font-serif text-[clamp(3rem,6vw,6rem)] leading-none tracking-[-0.04em]">
-            {item.label}
-          </h3>
-          <p className="mt-5 max-w-sm font-sans text-sm leading-7 text-[#f7f7f2]/68 sm:text-base sm:leading-8">
-            {item.description}
-          </p>
-        </div>
-      </div>
-    </article>
-  );
-}
-
 function LeadershipPreview() {
-  const { leadership } = company;
+  const { leadership } = companyOverviewPage;
 
   return (
     <section
-      aria-labelledby="leadership-preview-title"
+      aria-labelledby="company-leadership-title"
       className="px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36"
     >
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-12 lg:grid-cols-[minmax(22rem,0.5fr)_minmax(0,0.85fr)] lg:gap-20 xl:gap-28">
         <VisualPanel
           alt={leadership.imageAlt}
           imagePath={leadership.imagePath}
-          label="Founder profile"
-          meta="Verified leadership"
+          label="Leadership"
+          meta="Three founders"
           tall
         />
-        <div className="flex flex-col justify-between gap-12">
+        <div>
           <SectionHeading
-            eyebrow={leadership.eyebrow}
-            heading={leadership.heading}
-            highlight={leadership.highlight}
-            id="leadership-preview-title"
+            eyebrow="Leadership Preview"
+            id="company-leadership-title"
+            title={leadership.title}
           />
-          <div className="grid grid-cols-1 gap-10 border-y border-[#171817]/15 py-10 sm:py-12 lg:grid-cols-[minmax(0,0.68fr)_minmax(14rem,0.42fr)]">
-            <div>
-              <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
-                Founder
-              </p>
-              <h3 className="mt-5 font-serif text-[clamp(2.5rem,5vw,5.5rem)] leading-[0.96] tracking-[-0.04em]">
-                {leadership.founderName}
-              </h3>
-              <p className="mt-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-[#171817]/48">
-                {leadership.founderRole}
-              </p>
-            </div>
-            <p className="self-end font-sans text-sm leading-7 text-[#171817]/66 sm:text-base sm:leading-8">
-              {leadership.summary}
-            </p>
+          <p className="mt-8 max-w-2xl font-sans text-lg leading-8 text-[#171817]/66 sm:text-xl sm:leading-9">
+            {leadership.summary}
+          </p>
+          <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3">
+            {leadership.profiles.map((profile) => (
+              <LeadershipCard key={`${profile.name}-${profile.label}`} profile={profile} />
+            ))}
           </div>
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-[minmax(0,1fr)_auto] lg:items-end">
-            <p className="max-w-xl font-serif text-[clamp(2.25rem,4.8vw,4.75rem)] leading-[0.96] tracking-[-0.04em] text-[#171817]/72">
-              {leadership.teamNote}
-            </p>
-            <Link
-              className="inline-flex min-h-12 w-fit items-center justify-center bg-[#171817] px-6 font-sans text-sm font-semibold text-[#f7f7f2] transition-colors hover:bg-[#e35d3f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817]"
-              href={leadership.cta.href}
-            >
-              {leadership.cta.label}
-              <span aria-hidden="true" className="ml-8 text-lg leading-none">
-                &rarr;
-              </span>
-            </Link>
+          <div className="mt-9">
+            <PrimaryLink href="/company/leadership" label="Explore Leadership" />
           </div>
         </div>
       </div>
@@ -535,81 +416,135 @@ function LeadershipPreview() {
   );
 }
 
-function CompanyNumbers() {
-  return (
-    <section
-      aria-label="Company structure"
-      className="px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16 lg:pb-36"
-    >
-      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 border-y border-[#171817]/15 sm:grid-cols-2 lg:grid-cols-4">
-        {company.metrics.map((metric, index) => (
-          <MetricItem index={index} key={metric.label} metric={metric} />
-        ))}
-      </div>
-    </section>
-  );
-}
-
-function MetricItem({
-  index,
-  metric,
-}: {
-  index: number;
-  metric: CompanyMetric;
-}) {
+function LeadershipCard({ profile }: { profile: LeadershipProfile }) {
   return (
     <article
-      className="border-b border-[#171817]/15 py-8 sm:px-7 lg:border-b-0 lg:border-r lg:py-10 lg:last:border-r-0 motion-safe:animate-[hero-rise_800ms_ease-out_both]"
-      style={{ animationDelay: `${160 + index * 70}ms` }}
+      className={`border p-6 ${profile.verified ? "border-[#e35d3f]/50" : "border-[#171817]/15 bg-[#efefe7]"}`}
     >
-      <p className="font-serif text-[clamp(3rem,6vw,6.25rem)] leading-none tracking-[-0.04em] text-[#e35d3f]">
-        {metric.value}
+      <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
+        {profile.label}
       </p>
-      <p className="mt-5 max-w-xs font-sans text-[0.68rem] font-semibold uppercase leading-6 tracking-[0.2em] text-[#171817]/56">
-        {metric.label}
+      <h3 className="mt-6 font-serif text-[clamp(2rem,4vw,3.75rem)] leading-none tracking-[-0.04em]">
+        {profile.name}
+      </h3>
+      <p className="mt-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-[#171817]/48">
+        {profile.role}
+      </p>
+      <p className="mt-5 font-sans text-sm leading-7 text-[#171817]/62">
+        {profile.note}
       </p>
     </article>
   );
 }
 
-function CompanyCta() {
-  const { cta } = company;
+function LongTermDirection() {
+  const { longTerm } = companyOverviewPage;
+
+  return (
+    <section
+      aria-labelledby="long-term-direction-title"
+      className="px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16 lg:pb-36"
+    >
+      <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 border-y border-[#171817]/15 py-14 lg:grid-cols-[minmax(0,0.78fr)_minmax(22rem,0.58fr)] lg:items-end lg:gap-20 lg:py-20">
+        <h2
+          className="font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+          id="long-term-direction-title"
+        >
+          {longTerm.title}
+        </h2>
+        <div className="grid gap-7 font-sans text-base leading-8 text-[#171817]/68 sm:text-lg sm:leading-9">
+          {longTerm.paragraphs.map((paragraph) => (
+            <p key={paragraph}>{paragraph}</p>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CompanyPrinciples() {
+  return (
+    <section
+      aria-labelledby="company-principles-title"
+      className="px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16 lg:pb-36"
+    >
+      <div className="mx-auto w-full max-w-[1440px]">
+        <SectionHeading
+          eyebrow="Company Principles"
+          id="company-principles-title"
+          title="How we think about technology."
+        />
+        <div className="mt-12 grid grid-cols-1 border-t border-[#171817]/15 lg:grid-cols-2">
+          {companyOverviewPage.principles.map((item, index) => (
+            <EditorialItem index={index} item={item} key={item.title} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ExploreCompany() {
+  return (
+    <section
+      aria-labelledby="explore-company-title"
+      className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36"
+    >
+      <div className="mx-auto w-full max-w-[1440px]">
+        <h2
+          className="max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+          id="explore-company-title"
+        >
+          Explore the company
+        </h2>
+        <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-2">
+          {companyOverviewPage.explore.map((item) => (
+            <ExploreCard item={item} key={item.href} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function ExploreCard({ item }: { item: LinkItem }) {
+  return (
+    <Link
+      className="group border border-[#f7f7f2]/15 p-7 transition-colors hover:border-[#e35d3f]/70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e35d3f] sm:p-8"
+      href={item.href}
+    >
+      <h3 className="font-serif text-[clamp(2.2rem,4vw,4.25rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+        {item.title}
+      </h3>
+      <p className="mt-6 font-sans text-sm leading-7 text-[#f7f7f2]/64 sm:text-base sm:leading-8">
+        {item.description}
+      </p>
+      <span className="mt-8 inline-flex font-sans text-sm font-semibold text-[#e35d3f]">
+        Explore
+        <span className="ml-4 transition-transform duration-300 group-hover:translate-x-2">
+          &rarr;
+        </span>
+      </span>
+    </Link>
+  );
+}
+
+function FinalCta() {
+  const { finalCta } = companyOverviewPage;
 
   return (
     <section className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(22rem,0.55fr)] lg:items-end lg:gap-20">
-        <div>
-          <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f] motion-safe:animate-[hero-rise_700ms_ease-out_both]">
-            Bimal Global
-          </p>
-          <h2 className="mt-7 font-serif text-[clamp(3.5rem,8vw,8.75rem)] leading-[0.9] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]">
-            {cta.heading}
-            <span className="block text-[#e35d3f]">{cta.highlight}</span>
-          </h2>
-        </div>
+        <h2 className="font-serif text-[clamp(3.5rem,8vw,8.75rem)] leading-[0.9] tracking-[-0.045em]">
+          {finalCta.title}
+        </h2>
         <div>
           <p className="max-w-xl font-sans text-lg leading-8 text-[#f7f7f2]/68 sm:text-xl sm:leading-9">
-            {cta.summary}
+            {finalCta.summary}
           </p>
           <div className="mt-10 flex flex-col gap-3 font-sans text-sm font-semibold sm:flex-row lg:flex-col xl:flex-row">
-            <Link
-              className="inline-flex min-h-12 items-center justify-center bg-[#f7f7f2] px-6 text-[#171817] transition-colors hover:bg-[#e35d3f] hover:text-[#f7f7f2] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f7f7f2]"
-              href={cta.primaryCta.href}
-            >
-              {cta.primaryCta.label}
-              <span aria-hidden="true" className="ml-8 text-lg leading-none">
-                &rarr;
-              </span>
-            </Link>
-            <Link
-              className="inline-flex min-h-12 items-center justify-center border border-[#f7f7f2]/25 px-6 text-[#f7f7f2] transition-colors hover:border-[#e35d3f] hover:bg-[#e35d3f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f7f7f2]"
-              href={cta.secondaryCta.href}
-            >
-              {cta.secondaryCta.label}
-              <span aria-hidden="true" className="ml-8 text-lg leading-none">
-                &rarr;
-              </span>
-            </Link>
+            <LightLink href={finalCta.primaryCta.href} label={finalCta.primaryCta.label} />
+            <DarkOutlineLink href={finalCta.secondaryCta.href} label={finalCta.secondaryCta.label} />
           </div>
         </div>
       </div>
@@ -617,34 +552,96 @@ function CompanyCta() {
   );
 }
 
+function LayerDiagram({
+  dark = false,
+  layers,
+}: {
+  dark?: boolean;
+  layers: readonly string[];
+}) {
+  return (
+    <div
+      className={`relative overflow-hidden border p-5 ${dark ? "border-[#f7f7f2]/15 bg-[#20211f]" : "border-[#171817]/15 bg-[#efefe7]"}`}
+    >
+      <div
+        aria-hidden="true"
+        className={`absolute inset-0 opacity-50 [background-size:3rem_3rem] ${dark ? "[background-image:linear-gradient(rgba(247,247,242,0.12)_1px,transparent_1px),linear-gradient(90deg,rgba(247,247,242,0.09)_1px,transparent_1px)]" : "[background-image:linear-gradient(rgba(23,24,23,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(23,24,23,0.08)_1px,transparent_1px)]"}`}
+      />
+      <div className="relative grid gap-4">
+        {layers.map((layer, index) => (
+          <div
+            className={`grid min-h-16 grid-cols-[auto_minmax(0,1fr)] items-center gap-4 border px-4 sm:px-5 ${dark ? "border-[#f7f7f2]/15 bg-[#171817]/78" : "border-[#171817]/15 bg-[#f7f7f2]/80"}`}
+            key={layer}
+          >
+            <span className="font-sans text-xs font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
+              0{index + 1}
+            </span>
+            <span className="break-words font-serif text-2xl leading-none tracking-[-0.04em] sm:text-3xl">
+              {layer}
+            </span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function EditorialItem({
+  index,
+  item,
+}: {
+  index: number;
+  item: TextBlock;
+}) {
+  return (
+    <article className="group grid gap-5 border-b border-[#171817]/15 py-8 transition-colors hover:border-[#e35d3f]/60 hover:bg-[#171817]/[0.025] sm:grid-cols-[5rem_minmax(0,0.55fr)_minmax(0,1fr)] sm:gap-8 sm:py-10 lg:px-5">
+      <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
+        0{index + 1}
+      </p>
+      <h3 className="font-serif text-[clamp(2rem,4vw,4rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+        {item.title}
+      </h3>
+      <p className="max-w-xl font-sans text-sm leading-7 text-[#171817]/62 sm:text-base sm:leading-8">
+        {item.description}
+      </p>
+    </article>
+  );
+}
+
+function TagCloud({ dark = false, items }: { dark?: boolean; items: readonly string[] }) {
+  return (
+    <div className="mt-8 flex flex-wrap gap-3">
+      {items.map((item) => (
+        <span
+          className={`border px-4 py-3 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.2em] ${dark ? "border-[#f7f7f2]/15 text-[#f7f7f2]/58" : "border-[#171817]/15 text-[#171817]/58"}`}
+          key={item}
+        >
+          {item}
+        </span>
+      ))}
+    </div>
+  );
+}
+
 function SectionHeading({
   eyebrow,
-  heading,
-  highlight,
   id,
-  inverted = false,
+  title,
 }: {
   eyebrow: string;
-  heading: string;
-  highlight?: string;
   id: string;
-  inverted?: boolean;
+  title: string;
 }) {
   return (
     <div>
-      <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f] motion-safe:animate-[hero-rise_700ms_ease-out_both]">
+      <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
         {eyebrow}
       </p>
       <h2
-        className={`mt-7 max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both] ${
-          inverted ? "text-[#f7f7f2]" : "text-[#171817]"
-        }`}
+        className="mt-7 max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
         id={id}
       >
-        {heading}
-        {highlight ? (
-          <span className="block text-[#e35d3f]">{highlight}</span>
-        ) : null}
+        {title}
       </h2>
     </div>
   );
@@ -665,16 +662,12 @@ function VisualPanel({
 }) {
   return (
     <div
-      aria-label={alt ?? label}
-      className={`relative overflow-hidden bg-[#17211f] text-[#f7f7f2] motion-safe:animate-[hero-reveal_1000ms_180ms_ease-out_both] ${
-        tall
-          ? "min-h-[30rem] sm:min-h-[42rem] lg:min-h-[48rem]"
-          : "min-h-[28rem] sm:min-h-[36rem] lg:min-h-[42rem]"
-      }`}
+      aria-label={alt ?? `${label} visual`}
+      className={`relative overflow-hidden bg-[#17211f] text-[#f7f7f2] motion-safe:animate-[hero-reveal_1000ms_180ms_ease-out_both] ${tall ? "min-h-[30rem] sm:min-h-[42rem] lg:min-h-[48rem]" : "min-h-[28rem] sm:min-h-[36rem] lg:min-h-[42rem]"}`}
       data-image-path={imagePath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.12), rgba(23, 33, 31, 0.92)), url(${imagePath})`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.14), rgba(23, 33, 31, 0.92)), url(${imagePath})`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}
@@ -685,15 +678,15 @@ function VisualPanel({
       />
       <div
         aria-hidden="true"
-        className="absolute left-1/2 top-1/2 h-[17rem] w-[17rem] -translate-x-1/2 -translate-y-1/2 border border-[#f7f7f2]/20 sm:h-[25rem] sm:w-[25rem]"
+        className="absolute left-8 top-24 h-40 w-[70%] border border-[#f7f7f2]/20 sm:left-12 sm:h-56"
       />
       <div
         aria-hidden="true"
         className="absolute bottom-16 right-10 h-32 w-32 border-[1.5rem] border-[#e35d3f] opacity-90 sm:h-44 sm:w-44"
       />
-      <div className="absolute inset-x-7 top-7 flex items-center justify-between border-t border-[#f7f7f2]/30 pt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+      <div className="absolute inset-x-7 top-7 flex items-center justify-between gap-5 border-t border-[#f7f7f2]/30 pt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
         <span>{label}</span>
-        <span>{meta}</span>
+        <span className="text-right">{meta}</span>
       </div>
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
@@ -704,5 +697,61 @@ function VisualPanel({
         </p>
       </div>
     </div>
+  );
+}
+
+function PrimaryLink({ href, label }: { href: string; label: string }) {
+  return (
+    <Link
+      className="inline-flex min-h-12 w-fit items-center justify-center bg-[#171817] px-6 font-sans text-sm font-semibold text-[#f7f7f2] transition-colors hover:bg-[#e35d3f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817]"
+      href={href}
+    >
+      {label}
+      <span aria-hidden="true" className="ml-8 text-lg leading-none">
+        &rarr;
+      </span>
+    </Link>
+  );
+}
+
+function SecondaryLink({ href, label }: { href: string; label: string }) {
+  return (
+    <Link
+      className="inline-flex min-h-12 items-center justify-center border border-[#171817]/25 px-6 text-[#171817] transition-colors hover:border-[#171817] hover:bg-[#171817]/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817]"
+      href={href}
+    >
+      {label}
+      <span aria-hidden="true" className="ml-8 text-lg leading-none">
+        &rarr;
+      </span>
+    </Link>
+  );
+}
+
+function LightLink({ href, label }: { href: string; label: string }) {
+  return (
+    <Link
+      className="inline-flex min-h-12 items-center justify-center bg-[#f7f7f2] px-6 text-[#171817] transition-colors hover:bg-[#e35d3f] hover:text-[#f7f7f2] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f7f7f2]"
+      href={href}
+    >
+      {label}
+      <span aria-hidden="true" className="ml-8 text-lg leading-none">
+        &rarr;
+      </span>
+    </Link>
+  );
+}
+
+function DarkOutlineLink({ href, label }: { href: string; label: string }) {
+  return (
+    <Link
+      className="inline-flex min-h-12 items-center justify-center border border-[#f7f7f2]/25 px-6 text-[#f7f7f2] transition-colors hover:border-[#e35d3f] hover:bg-[#e35d3f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f7f7f2]"
+      href={href}
+    >
+      {label}
+      <span aria-hidden="true" className="ml-8 text-lg leading-none">
+        &rarr;
+      </span>
+    </Link>
   );
 }
