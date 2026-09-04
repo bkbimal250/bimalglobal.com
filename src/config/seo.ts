@@ -1,0 +1,1 @@
+export const defaultSeo = { title: "Bimal Global" } as const;
