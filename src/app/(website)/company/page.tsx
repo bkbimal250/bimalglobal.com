@@ -403,8 +403,11 @@ function LeadershipPreview() {
             {leadership.summary}
           </p>
           <div className="mt-10 grid grid-cols-1 gap-5 lg:grid-cols-3">
-            {leadership.profiles.map((profile) => (
-              <LeadershipCard key={`${profile.name}-${profile.label}`} profile={profile} />
+            {leadership.profiles.map((profile, index) => (
+              <LeadershipCard
+                key={`${profile.name}-${profile.label}-${index}`}
+                profile={profile}
+              />
             ))}
           </div>
           <div className="mt-9">

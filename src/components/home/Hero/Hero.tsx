@@ -7,17 +7,21 @@ import { HowWeWork } from "../HowWeWork/HowWeWork";
 import { Insights } from "../Insights/Insights";
 import { Leadership } from "../Leadership/Leadership";
 import { SelectedWork } from "../SelectedWork/SelectedWork";
-import { HeroVisual } from "./HeroVisual";
+
+const heroImagePath = "/images/home/hero-placeholder.jpg";
 
 export function Hero() {
   return (
     <main className="min-h-screen overflow-hidden bg-[#f7f7f2] text-[#171817]">
       <section
         aria-labelledby="hero-title"
-        className="relative isolate flex min-h-screen flex-col px-6 py-24 sm:px-10 sm:py-28 lg:px-16 lg:py-32"
+        className="relative isolate flex min-h-screen flex-col bg-cover bg-center px-6 py-24 sm:px-10 sm:py-28 lg:px-16 lg:py-32"
+        style={{
+          backgroundImage: `linear-gradient(90deg, rgba(247, 247, 242, 0.98) 0%, rgba(247, 247, 242, 0.86) 34%, rgba(247, 247, 242, 0.12) 68%, rgba(247, 247, 242, 0.02) 100%), url(${heroImagePath})`,
+        }}
       >
         <div className="relative z-10 flex flex-1 items-center py-10 sm:py-12 lg:py-14">
-          <div className="grid w-full max-w-[1440px] grid-cols-1 gap-14 lg:grid-cols-[minmax(0,1.05fr)_minmax(23rem,0.95fr)] lg:items-center lg:gap-20 xl:gap-28">
+          <div className="w-full max-w-[1440px]">
             <div className="max-w-3xl">
               <p className="motion-safe:animate-[hero-rise_700ms_ease-out_both] font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
                 Global technology company
@@ -52,7 +56,6 @@ export function Hero() {
               </div>
             </div>
 
-            <HeroVisual />
           </div>
         </div>
 

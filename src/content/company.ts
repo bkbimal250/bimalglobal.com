@@ -27,7 +27,7 @@ export const companyOverviewPage = {
     title: "Building technology for what comes next.",
     summary:
       "BIMAL GLOBAL is a technology company focused on designing and building software, digital products, mobile platforms, cloud infrastructure, and AI-enabled solutions around real business and product opportunities.",
-    imagePath: "/images/company/hero.jpg",
+    imagePath: "/images/home/company/hero.jpg",
     imageAlt:
       "Abstract company technology system visual for BIMAL GLOBAL",
     primaryCta: { href: "/contact", label: "Work With Us" },
