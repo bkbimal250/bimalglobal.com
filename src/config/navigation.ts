@@ -51,6 +51,7 @@ export const navigation: NavigationItem[] = [
   { label: "Work", href: "/work" },
   { label: "Insights", href: "/insights" },
   { label: "Careers", href: "/careers" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const primaryNavigationCta = {
@@ -76,7 +77,9 @@ export const footerNavigationGroups = [
     label: "Explore",
     links: navigation
       .filter((item) =>
-        ["Industries", "Work", "Insights", "Careers"].includes(item.label),
+        ["Industries", "Work", "Insights", "Careers", "Contact"].includes(
+          item.label,
+        ),
       )
       .map(({ href, label }) => ({ href, label })),
   },
@@ -86,7 +89,4 @@ export const footerNavigationGroups = [
   },
 ] as const;
 
-export const legalNavigation = [
-  { href: "/privacy", label: "Privacy Policy" },
-  { href: "/terms", label: "Terms of Use" },
-] as const;
+export const legalNavigation: NavigationSubItem[] = [];

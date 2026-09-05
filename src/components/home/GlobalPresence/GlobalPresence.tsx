@@ -82,7 +82,7 @@ function PresenceVisual() {
       data-image-path={globalVisualPath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.08), rgba(23, 24, 23, 0.92)), url(${globalVisualPath})`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.08), rgba(23, 24, 23, 0.92))`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

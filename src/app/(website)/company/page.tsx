@@ -112,7 +112,7 @@ function Capabilities() {
           title="From product ideas to technology systems."
         />
         <div className="mt-12 grid grid-cols-1 border-t border-[#171817]/15 lg:grid-cols-2">
-          {capabilitiesPage.capabilities.map((capability, index) => (
+          {capabilitiesPage.capabilities.map((capability) => (
             <CapabilityItem
               capability={capability}
               key={capability.id}
@@ -667,7 +667,7 @@ function VisualPanel({
       data-image-path={imagePath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.14), rgba(23, 33, 31, 0.92)), url(${imagePath})`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.14), rgba(23, 33, 31, 0.92))`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

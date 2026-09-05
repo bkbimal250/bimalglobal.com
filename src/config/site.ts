@@ -1,4 +1,5 @@
 export const siteConfig = {
-  name: "Bimal Global",
-  description: "Bimal Global digital experience",
+  name: "BIMAL GLOBAL",
+  description:
+    "BIMAL GLOBAL is a technology and engineering company building software, products, mobile platforms, cloud infrastructure, and AI-enabled systems.",
 } as const;

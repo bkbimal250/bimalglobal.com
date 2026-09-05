@@ -1,84 +1,192 @@
 export type ContactOption = {
-  title: string;
   description: string;
+  href: string;
+  title: string;
 };
 
 export type ContactFaq = {
-  question: string;
   answer: string;
+  question: string;
 };
 
 export const contactPage = {
   hero: {
     eyebrow: "Contact",
-    title: "Start a conversation about what you want to build.",
+    title: "Let's build what comes next.",
     summary:
-      "Tell BIMAL GLOBAL about the product, platform, system, or technical challenge you are thinking through. The first step is understanding the context clearly.",
+      "Tell us what you are trying to build, improve, connect, or scale. We will start by understanding the problem, the product, and the technology behind it.",
+    primaryCta: { href: "#contact-form", label: "Start a Conversation" },
+    secondaryCta: { href: "/capabilities", label: "Explore Capabilities" },
   },
   form: {
-    title: "Project inquiry",
+    title: "Start with the problem.",
     summary:
-      "Share the useful details you have now. The structure can later connect to a CRM, backend workflow, email service, or admin dashboard.",
-    submitLabel: "Send Inquiry",
+      "You do not need a complete specification. A clear description of the problem is a good place to start.",
+    submitLabel: "Review Inquiry",
+    loadingLabel: "Checking details...",
     successMessage:
-      "Thank you. Your inquiry has been received in the demo contact endpoint.",
+      "Your inquiry was submitted successfully through the configured contact endpoint.",
+    deliveryUnavailableMessage:
+      "This contact form is validated, but message delivery is not configured yet. No inquiry has been sent.",
     errorMessage:
-      "Something went wrong while sending the inquiry. Please try again.",
+      "The inquiry could not be processed. Please review the fields and try again.",
   },
   fields: {
-    projectTypes: [
-      "New product or platform",
-      "Existing system improvement",
-      "Cloud or infrastructure",
-      "Mobile application",
-      "AI-enabled product",
-      "General technology discussion",
+    helpTopics: [
+      "Software Engineering",
+      "Product Development",
+      "Mobile Platforms",
+      "Cloud & Infrastructure",
+      "Artificial Intelligence",
+      "Existing System Modernization",
+      "Other",
     ],
-    budgets: [
+    timelines: [
       "Not defined yet",
-      "Exploratory",
-      "Small project",
-      "Growth project",
-      "Enterprise initiative",
+      "Exploring options",
+      "Soon",
+      "This quarter",
+      "Longer-term planning",
     ],
   },
-  options: [
+  usefulContext: [
     {
-      title: "Build something new",
-      description:
-        "For new products, platforms, applications, APIs, mobile experiences, and digital systems.",
+      title: "The problem",
+      description: "What are you trying to solve, improve, connect, or scale?",
     },
     {
-      title: "Improve an existing system",
-      description:
-        "For modernization, reliability, performance, infrastructure, UX, or product evolution work.",
+      title: "The product",
+      description: "What are you trying to build, modernize, or evolve?",
     },
     {
-      title: "Discuss a technical direction",
+      title: "The users",
+      description: "Who will use the system, product, workflow, or platform?",
+    },
+    {
+      title: "The current technology",
       description:
-        "For early-stage architecture, product strategy, capability planning, or engineering discovery.",
+        "Mention any existing application, API, infrastructure, data, or integration context.",
+    },
+    {
+      title: "The goal",
+      description: "What would make the work useful or successful?",
+    },
+    {
+      title: "The constraints",
+      description:
+        "Share timeline, integrations, scale, operations, or other known limits if you have them.",
+    },
+  ],
+  capabilities: [
+    {
+      title: "Software Engineering",
+      description:
+        "Applications, APIs, platforms, architecture, integrations, quality, and performance.",
+      href: "/capabilities/software-engineering",
+    },
+    {
+      title: "Product Development",
+      description:
+        "Discovery, UX, prototyping, MVPs, product engineering, and evolution.",
+      href: "/capabilities/product-development",
+    },
+    {
+      title: "Mobile Platforms",
+      description:
+        "Android, iOS, cross-platform applications, and mobile architecture.",
+      href: "/capabilities/mobile-platforms",
+    },
+    {
+      title: "Cloud & Infrastructure",
+      description:
+        "Cloud architecture, CI/CD, automation, observability, reliability, and scalability.",
+      href: "/capabilities/cloud-infrastructure",
+    },
+    {
+      title: "Artificial Intelligence",
+      description:
+        "Generative AI, RAG, intelligent search, AI workflows, machine learning, and evaluation.",
+      href: "/capabilities/artificial-intelligence",
     },
   ] satisfies ContactOption[],
-  details: [
-    "India and Nepal focus with global delivery ambitions.",
-    "Frontend-first website contact flow ready for backend integration.",
-    "No pricing, fixed timelines, or delivery guarantees are assumed from this form.",
+  startingPoints: [
+    {
+      title: "New Product",
+      description:
+        "You have an idea and need help turning it into a technology product.",
+    },
+    {
+      title: "Existing Product",
+      description:
+        "You already have a system and want to improve, extend, or scale it.",
+    },
+    {
+      title: "Modernization",
+      description:
+        "Your existing technology needs architectural or infrastructure improvement.",
+    },
+    {
+      title: "AI Opportunity",
+      description:
+        "You want to identify where AI can provide practical value.",
+    },
+    {
+      title: "Mobile Expansion",
+      description:
+        "You want to bring an existing product or service to mobile.",
+    },
+    {
+      title: "Platform Challenge",
+      description:
+        "You need help with architecture, cloud, integrations, reliability, or scale.",
+    },
   ],
+  collaboration: {
+    title: "Technology has no fixed geography.",
+    description:
+      "BIMAL GLOBAL's positioning connects India, Nepal, international markets, distributed teams, and remote product and engineering collaboration. The conversation can begin from the problem and move toward the right working model.",
+    links: [
+      { href: "/company/presence", label: "Explore Presence" },
+      { href: "/company/how-we-work", label: "See How We Work" },
+    ],
+  },
   faqs: [
     {
-      question: "What should I include in the message?",
+      question: "What should I include in my inquiry?",
       answer:
-        "Share what you are building, what problem you want to solve, the current stage, important constraints, and any timeline or decision context you already know.",
+        "A problem description, product context, existing technology, goals, and known constraints are useful. A complete specification is not required.",
     },
     {
-      question: "Can I contact BIMAL GLOBAL for an early idea?",
+      question: "Can you work with an existing system?",
       answer:
-        "Yes. Early conversations can focus on understanding the product direction, technical options, and the next practical step.",
+        "Yes. Where appropriate, BIMAL GLOBAL can work on modernization, integration, optimization, infrastructure, and product evolution.",
     },
     {
-      question: "Does this form create a fixed project scope?",
+      question: "Can you build a product from an idea?",
       answer:
-        "No. It starts a conversation. Project scope, timelines, cost, and delivery model should be defined after discovery.",
+        "Product development can begin with understanding the problem, defining the right scope, and deciding what should be built first.",
+    },
+    {
+      question: "Can you help with AI even if we are unsure what to build?",
+      answer:
+        "AI opportunities should be evaluated against actual workflows, data, users, and business goals before deciding what to build.",
+    },
+    {
+      question: "Do you work internationally?",
+      answer:
+        "BIMAL GLOBAL is positioned around India, Nepal, international markets, and distributed product and engineering collaboration.",
+    },
+    {
+      question: "Can we discuss only a technical problem?",
+      answer:
+        "Yes. The conversation can start from an architecture, infrastructure, mobile, integration, AI, or engineering problem.",
     },
   ] satisfies ContactFaq[],
+  finalCta: {
+    title: "Have a problem worth solving?",
+    summary:
+      "Start with the problem. We can explore the product, engineering, infrastructure, mobile, and AI possibilities together.",
+    primaryCta: { href: "#contact-form", label: "Start a Conversation" },
+    secondaryCta: { href: "/company/how-we-work", label: "Explore How We Work" },
+  },
 } as const;

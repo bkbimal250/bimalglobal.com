@@ -10,7 +10,7 @@ import {
 } from "@/content/capabilities";
 
 export const metadata: Metadata = {
-  title: "Technology Capabilities | BIMAL GLOBAL",
+  title: "Capabilities | BIMAL GLOBAL",
   description:
     "Explore BIMAL GLOBAL's software engineering, product development, mobile, cloud, infrastructure, and artificial intelligence capabilities.",
 };
@@ -628,7 +628,7 @@ function VisualPanel({
       data-image-path={imagePath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.12), rgba(23, 33, 31, 0.92)), url(${imagePath})`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.12), rgba(23, 33, 31, 0.92))`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

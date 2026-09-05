@@ -63,7 +63,7 @@ function WorkCard({ isFeatured, item }: { isFeatured: boolean; item: WorkItem })
       className={`group grid overflow-hidden border border-[#171817]/15 outline-none transition-colors hover:border-[#e35d3f]/60 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e35d3f] ${
         isFeatured ? "lg:col-span-2 lg:grid-cols-[minmax(0,1.1fr)_minmax(22rem,0.75fr)]" : ""
       }`}
-      href={item.href}
+      href="/work"
     >
       <div
         aria-label={item.imageAlt}
@@ -72,7 +72,7 @@ function WorkCard({ isFeatured, item }: { isFeatured: boolean; item: WorkItem })
         }`}
         role="img"
         style={{
-          backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.12), rgba(23, 24, 23, 0.86)), url(${item.imagePath})`,
+          backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.12), rgba(23, 24, 23, 0.86))`,
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
@@ -141,7 +141,7 @@ function ProjectPlaceholderVisual() {
       data-image-path={imagePath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.16), rgba(23, 33, 31, 0.92)), url(${imagePath})`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.16), rgba(23, 33, 31, 0.92))`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

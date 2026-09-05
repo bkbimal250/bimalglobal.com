@@ -8,7 +8,7 @@ export function CompanyVisual() {
       data-image-path={companyImagePath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(135deg, rgba(23, 33, 31, 0.2), rgba(23, 33, 31, 0.86)), url(${companyImagePath})`,
+        backgroundImage: `linear-gradient(135deg, rgba(23, 33, 31, 0.2), rgba(23, 33, 31, 0.86))`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

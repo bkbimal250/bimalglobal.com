@@ -96,9 +96,9 @@ function InsightCard({
 }) {
   return (
     <Link
-      aria-label={`Read ${insight.title}`}
+      aria-label={`View insights including ${insight.title}`}
       className="group grid overflow-hidden border border-[#f7f7f2]/15 outline-none transition-colors hover:border-[#e35d3f]/70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e35d3f]"
-      href={`/insights/${insight.slug}`}
+      href="/insights"
     >
       <InsightVisual insight={insight} isFeatured={isFeatured} />
 
@@ -168,7 +168,7 @@ function InsightVisual({
         className={visualClasses}
         role={insight.imageAlt ? "img" : undefined}
         style={{
-          backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.14), rgba(23, 24, 23, 0.88)), url(${insight.imagePath})`,
+          backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.14), rgba(23, 24, 23, 0.88))`,
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}

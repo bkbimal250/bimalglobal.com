@@ -180,7 +180,7 @@ function ProcessVisual({ step }: { step: ProcessStep }) {
       data-image-path={step.imagePath}
       key={step.name}
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.18), rgba(23, 24, 23, 0.9)), url(${step.imagePath})`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.18), rgba(23, 24, 23, 0.9))`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

@@ -94,7 +94,7 @@ function LeadershipPortrait({ leader }: { leader: Leader }) {
       data-image-path={leader.imagePath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.1), rgba(23, 33, 31, 0.9)), url(${leader.imagePath})`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.1), rgba(23, 33, 31, 0.9))`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

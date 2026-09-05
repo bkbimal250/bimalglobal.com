@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 import {
@@ -7,6 +8,12 @@ import {
   type PresenceCountry,
   type PresenceMetric,
 } from "@/content/presence";
+
+export const metadata: Metadata = {
+  description:
+    "BIMAL GLOBAL works from India and Nepal with a global outlook for technology, engineering, product, cloud, and AI initiatives.",
+  title: "Presence | BIMAL GLOBAL",
+};
 
 export default function PresencePage() {
   return (
@@ -534,7 +541,7 @@ function VisualPanel({
       data-image-path={imagePath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.12), rgba(23, 33, 31, 0.92)), url(${imagePath})`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.12), rgba(23, 33, 31, 0.92))`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

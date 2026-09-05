@@ -195,7 +195,7 @@ function LifecycleVisual({ stage }: { stage: LifecycleStage }) {
       data-image-path={stage.imagePath}
       key={stage.name}
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.14), rgba(23, 33, 31, 0.9)), url(${stage.imagePath})`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.14), rgba(23, 33, 31, 0.9))`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

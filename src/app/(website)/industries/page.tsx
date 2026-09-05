@@ -138,7 +138,7 @@ function IndustryCard({ index, industry }: { index: number; industry: Industry }
   return (
     <Link
       className="group flex min-h-[24rem] flex-col border-b border-[#171817]/15 p-7 transition-colors hover:border-[#e35d3f]/70 hover:bg-[#171817]/[0.025] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e35d3f] md:border-r md:[&:nth-child(2n)]:border-r-0 xl:[&:nth-child(2n)]:border-r xl:[&:nth-child(3n)]:border-r-0 motion-safe:animate-[hero-rise_800ms_ease-out_both]"
-      href={`/industries/${industry.slug}`}
+      href="/industries"
       style={{ animationDelay: `${120 + index * 40}ms` }}
     >
       <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
@@ -158,7 +158,7 @@ function IndustryCard({ index, industry }: { index: number; industry: Industry }
         ))}
       </ul>
       <span className="mt-auto pt-8 font-sans text-sm font-semibold text-[#e35d3f]">
-        Future industry page
+        Industry context
         <span aria-hidden="true" className="ml-4 inline-block transition-transform duration-300 group-hover:translate-x-2">
           &rarr;
         </span>
@@ -738,7 +738,7 @@ function VisualPanel({
       data-image-path={imagePath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.12), rgba(23, 33, 31, 0.92)), url(${imagePath})`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.12), rgba(23, 33, 31, 0.92))`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

@@ -174,7 +174,7 @@ function CapabilityVisual({ capability }: { capability: Capability }) {
       data-image-path={capability.imagePath}
       key={capability.href}
       style={{
-        backgroundImage: `linear-gradient(140deg, rgba(23, 24, 23, 0.18), rgba(23, 24, 23, 0.92)), url(${capability.imagePath})`,
+        backgroundImage: `linear-gradient(140deg, rgba(23, 24, 23, 0.18), rgba(23, 24, 23, 0.92))`,
         backgroundPosition: "center",
         backgroundSize: "cover",
       }}

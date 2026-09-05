@@ -106,20 +106,22 @@ export function Footer() {
               &copy; {currentYear} {siteConfig.name.toUpperCase()}. All rights
               reserved.
             </p>
-            <nav aria-label="Legal navigation" className="mt-4">
-              <ul className="flex flex-wrap gap-x-5 gap-y-2 lg:justify-end">
-                {legalNavigation.map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      className="transition-colors hover:text-[#f7f7f2] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f7f7f2]"
-                      href={link.href}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
+            {legalNavigation.length > 0 ? (
+              <nav aria-label="Legal navigation" className="mt-4">
+                <ul className="flex flex-wrap gap-x-5 gap-y-2 lg:justify-end">
+                  {legalNavigation.map((link) => (
+                    <li key={link.href}>
+                      <Link
+                        className="transition-colors hover:text-[#f7f7f2] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#f7f7f2]"
+                        href={link.href}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
+            ) : null}
           </div>
         </div>
       </div>

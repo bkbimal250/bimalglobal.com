@@ -1,6 +1,6 @@
 export type TextBlock = {
-  title: string;
   description: string;
+  title: string;
 };
 
 export type WorkItem = {
@@ -26,467 +26,475 @@ export type ProductType = TextBlock & {
 };
 
 export type SolutionScenario = {
-  number: string;
-  title: string;
-  example: string;
   components: string[];
-  capabilities: string[];
-};
-
-export type ArchitectureLayer = {
-  title: string;
-  detail: string;
-};
-
-export type LifecycleStage = {
+  description: string;
   number: string;
   title: string;
-  description: string;
+};
+
+export type ComplexityStage = TextBlock & {
+  scope: string;
+};
+
+export type TechnologyLayer = TextBlock & {
+  examples: string[];
+};
+
+export type LifecycleStage = TextBlock & {
+  number: string;
 };
 
 export type CapabilityConnection = TextBlock & {
   href: string;
 };
 
-export type FutureCaseStudy = {
-  slug: string;
-  title: string;
-  industry?: string;
-  summary: string;
-  challenge?: string;
-  solution?: string;
-  capabilities: string[];
-  technologies?: string[];
-  images?: string[];
-  outcomes?: string[];
-  published: boolean;
-};
-
 export type FaqItem = {
-  question: string;
   answer: string;
+  question: string;
 };
 
 export const workItems: WorkItem[] = [];
-
-export const futureCaseStudies: FutureCaseStudy[] = [];
 
 export const workPage = {
   hero: {
     eyebrow: "Work",
     title: "Technology built for products, platforms, and real-world systems.",
     summary:
-      "BIMAL GLOBAL designs and develops digital products, software platforms, mobile applications, business systems, infrastructure, and AI-enabled experiences around real requirements and opportunities.",
-    imagePath: "/images/work/hero.jpg",
-    imageAlt:
-      "Abstract product and technology system visual for BIMAL GLOBAL work possibilities",
-    primaryCta: { href: "/contact", label: "Discuss Your Project" },
-    secondaryCta: { href: "/capabilities", label: "Explore Capabilities" },
+      "From digital products and mobile applications to enterprise platforms, cloud infrastructure, and AI-enabled systems, BIMAL GLOBAL helps turn complex technology requirements into products that can evolve.",
+    primaryCta: { href: "/capabilities", label: "Explore Capabilities" },
+    secondaryCta: { href: "/contact", label: "Start a Conversation" },
   },
-  categories: [
+  buildCategories: [
     {
-      title: "Digital Platforms",
+      title: "Digital Products",
+      description: "Customer-facing applications and digital experiences.",
+    },
+    {
+      title: "Platforms",
       description:
-        "Large web-based products designed around customers, workflows, content, or business operations.",
+        "Multi-user systems, marketplaces, SaaS platforms, content platforms, and operational platforms.",
+    },
+    {
+      title: "Enterprise Systems",
+      description:
+        "Business workflows, internal tools, dashboards, integrations, and operational software.",
     },
     {
       title: "Mobile Applications",
-      description:
-        "Customer, employee, marketplace, service, and workflow applications.",
+      description: "Android, iOS, and cross-platform mobile experiences.",
     },
     {
-      title: "SaaS Products",
+      title: "Media & OTT Platforms",
       description:
-        "Subscription-based or platform-based software products designed to evolve over time.",
-    },
-    {
-      title: "Marketplaces",
-      description:
-        "Platforms connecting customers, providers, sellers, creators, or businesses.",
-    },
-    {
-      title: "Business Systems",
-      description:
-        "Internal software supporting operations, teams, workflows, and information.",
-    },
-    {
-      title: "Media Platforms",
-      description:
-        "Content, streaming, discovery, creator, and entertainment experiences.",
+        "Content platforms, streaming experiences, subscriptions, recommendations, multi-language systems, and live-content capabilities.",
     },
     {
       title: "AI-Enabled Products",
       description:
-        "Products where AI becomes part of the user experience or workflow.",
+        "Search, recommendations, assistants, document intelligence, automation, predictive systems, and intelligent workflows.",
     },
     {
-      title: "APIs & Backend Systems",
+      title: "Cloud Systems",
       description:
-        "Services, integrations, data systems, and backend platforms powering digital products.",
+        "Application infrastructure, deployment systems, observability, reliability, scalability, and automation.",
     },
   ] satisfies TextBlock[],
   productTypes: [
     {
-      label: "Consumer Product",
-      title: "Customer-facing application",
+      label: "Marketplaces",
+      title: "Connect demand, supply, trust, and operations.",
       description:
-        "Digital experiences designed around discovery, action, service, or engagement.",
+        "Search, profiles, transactions, communication, dashboards, and workflow control.",
     },
     {
-      label: "Business Product",
-      title: "Internal or enterprise software",
+      label: "SaaS Platforms",
+      title: "Subscription products that can evolve over time.",
       description:
-        "Systems that help teams operate, collaborate, report, and manage workflows.",
+        "Roles, accounts, product logic, billing touchpoints, data, and operational visibility.",
     },
     {
-      label: "Marketplace",
-      title: "Multiple users and transaction flows",
+      label: "Mobile Applications",
+      title: "Products built for real mobile usage.",
       description:
-        "Products that connect demand, supply, trust, communication, and operations.",
+        "Device behavior, offline needs, notifications, mobile APIs, and cross-platform delivery.",
     },
     {
-      label: "Platform",
-      title: "Multiple systems and capabilities",
+      label: "OTT / Media",
+      title: "Content, streaming, discovery, and subscriptions.",
       description:
-        "Connected software foundations that support several roles, modules, and integrations.",
+        "Catalogs, recommendations, profiles, analytics, multi-language experiences, and mobile access.",
     },
     {
-      label: "Mobile Product",
-      title: "Experiences designed around mobile usage",
+      label: "Customer Portals",
+      title: "Digital access to services, data, and actions.",
       description:
-        "Applications built for device behavior, real-time context, and mobile workflows.",
+        "Self-service workflows, account areas, support flows, and connected backend systems.",
     },
     {
-      label: "Content Product",
-      title: "Media, content, discovery, or streaming",
+      label: "Business Systems",
+      title: "Operational software for teams and workflows.",
       description:
-        "Products where content structure, experience, management, and delivery matter.",
+        "Dashboards, permissions, reporting, CRM-like workflows, approvals, and integrations.",
     },
     {
-      label: "Intelligent Product",
-      title: "AI integrated into workflows and experiences",
+      label: "AI-Enabled Applications",
+      title: "Intelligence added where it supports real work.",
       description:
-        "Software where intelligence assists people, decisions, content, or operations.",
+        "Assistants, search, document processing, classification, recommendations, and human review.",
+    },
+    {
+      label: "Integration Platforms",
+      title: "Systems that connect tools, APIs, data, and operations.",
+      description:
+        "Internal services, external APIs, payment systems, communication platforms, and data flows.",
     },
   ] satisfies ProductType[],
   scenarios: [
     {
       number: "01",
       title: "Marketplace Platform",
-      example: "A platform connecting users with service providers.",
+      description:
+        "A platform connecting customers, providers, search, payments, communication, and operational workflows.",
       components: [
-        "User applications",
-        "Provider dashboards",
+        "Customer app",
+        "Provider dashboard",
         "Search",
-        "Discovery",
-        "Profiles",
-        "Booking or requests",
-        "Payments integration",
-        "Notifications",
-        "Admin systems",
-        "Analytics",
+        "Payments",
+        "Messaging",
+        "Admin tools",
       ],
-      capabilities: ["Product Development", "Software Engineering", "Mobile", "Cloud"],
     },
     {
       number: "02",
-      title: "Media & OTT Platform",
-      example: "A digital entertainment and content ecosystem.",
+      title: "OTT Platform",
+      description:
+        "Content management, subscriptions, streaming, recommendations, mobile applications, analytics, and cloud infrastructure.",
       components: [
-        "Content discovery",
-        "Video experiences",
-        "User profiles",
-        "Multiple content categories",
-        "Creator or content workflows",
-        "Subscription capabilities",
-        "Mobile applications",
-        "Backend systems",
-        "Content management",
-        "Streaming infrastructure",
-      ],
-      capabilities: [
-        "Product Development",
-        "Software Engineering",
-        "Mobile",
-        "Cloud",
-        "AI",
+        "Content catalog",
+        "Streaming",
+        "Profiles",
+        "Subscriptions",
+        "Recommendations",
+        "Mobile apps",
       ],
     },
     {
       number: "03",
       title: "Business Operations Platform",
-      example:
-        "Internal software connecting teams, workflows, and business information.",
+      description:
+        "Role-based workflows, dashboards, staff systems, notifications, reporting, and integrations.",
       components: [
+        "Roles",
         "Dashboards",
-        "Staff management",
-        "CRM",
-        "Reporting",
-        "Workflow automation",
-        "Data management",
-        "Roles and permissions",
-        "APIs",
-        "Mobile workforce access",
+        "Workflows",
+        "Notifications",
+        "Reports",
+        "Integrations",
       ],
-      capabilities: ["Product Development", "Software Engineering", "Cloud"],
     },
     {
       number: "04",
-      title: "Food & Hospitality Platform",
-      example: "Digital systems connecting customers and business operations.",
+      title: "Food Technology Platform",
+      description:
+        "Ordering, restaurant management, customer applications, payments, operational workflows, and analytics.",
       components: [
-        "Customer application",
         "Ordering",
-        "Reservations",
-        "Service workflows",
-        "Business dashboard",
-        "Notifications",
-        "Operations tools",
+        "Menu systems",
+        "Payments",
+        "Operations",
         "Analytics",
+        "Customer app",
       ],
-      capabilities: ["Product Development", "Software Engineering", "Mobile"],
     },
     {
       number: "05",
       title: "Real Estate Platform",
-      example:
-        "A digital platform for property discovery and business workflows.",
+      description:
+        "Listings, search, CRM workflows, lead management, communication, analytics, and mobile experiences.",
       components: [
-        "Property listings",
+        "Listings",
         "Search",
-        "Filters",
-        "Location-based discovery",
-        "Lead workflows",
         "CRM",
-        "Agent tools",
-        "Mobile applications",
-        "Admin systems",
+        "Leads",
+        "Communication",
+        "Analytics",
       ],
-      capabilities: ["Product Development", "Software Engineering", "Mobile", "Cloud"],
     },
     {
       number: "06",
-      title: "AI-Enabled Business Product",
-      example:
-        "A software platform where AI supports information-heavy workflows.",
+      title: "AI Business Platform",
+      description:
+        "Intelligent search, document processing, assistants, classification, recommendations, workflow automation, and decision support.",
       components: [
-        "AI assistants",
-        "Search",
-        "Information processing",
-        "Content assistance",
-        "Workflow automation",
-        "Data context",
-        "Human review",
+        "AI search",
+        "Documents",
+        "Assistants",
+        "Classification",
+        "Automation",
+        "Review",
       ],
-      capabilities: ["Product Development", "Software Engineering", "AI", "Cloud"],
     },
   ] satisfies SolutionScenario[],
-  architectureLayers: [
-    { title: "Experience", detail: "Web + Mobile" },
-    { title: "Product Layer", detail: "Features + Workflows" },
-    { title: "Application Layer", detail: "Backend + APIs" },
-    { title: "Data", detail: "Business Information + Content" },
-    { title: "Integrations", detail: "External Systems + Services" },
-    { title: "Infrastructure", detail: "Deployment + Monitoring + Reliability" },
-    { title: "Intelligence", detail: "AI where appropriate" },
-  ] satisfies ArchitectureLayer[],
-  capabilityConnections: [
+  complexity: [
     {
-      title: "Product Development",
-      description: "Defines the product direction and structure.",
-      href: "/capabilities/product-development",
+      title: "Application",
+      scope: "Interface + Workflow",
+      description: "Interfaces, workflows, APIs, and authentication.",
     },
     {
+      title: "Product",
+      scope: "Users + Data",
+      description: "User journeys, data, integrations, analytics, and product logic.",
+    },
+    {
+      title: "Platform",
+      scope: "Roles + Services",
+      description:
+        "Multiple users, services, permissions, reliability, and scaling considerations.",
+    },
+    {
+      title: "Ecosystem",
+      scope: "Apps + Partners",
+      description:
+        "Multiple applications, services, partners, integrations, data flows, and infrastructure.",
+    },
+  ] satisfies ComplexityStage[],
+  buildingBlocks: [
+    {
+      title: "Experience",
+      description: "Interfaces where users understand, decide, act, and manage work.",
+      examples: ["Web", "Mobile", "Dashboards", "Customer interfaces"],
+    },
+    {
+      title: "Application",
+      description: "The software layer where business rules and workflows live.",
+      examples: ["Logic", "APIs", "Workflows", "Authentication"],
+    },
+    {
+      title: "Data",
+      description: "Information foundations that support product behavior and decisions.",
+      examples: ["Databases", "Search", "Analytics", "Storage"],
+    },
+    {
+      title: "Infrastructure",
+      description: "The operating foundation for deployment, reliability, and visibility.",
+      examples: ["Cloud", "Containers", "CI/CD", "Observability"],
+    },
+    {
+      title: "Intelligence",
+      description: "AI or machine learning added where it supports useful outcomes.",
+      examples: ["AI", "Recommendations", "Search", "Automation"],
+    },
+    {
+      title: "Integration",
+      description: "Connections to systems, services, partners, and external APIs.",
+      examples: ["Payments", "Communication", "Internal systems", "External APIs"],
+    },
+  ] satisfies TechnologyLayer[],
+  lifecycle: [
+    {
+      number: "01",
+      title: "Understand",
+      description: "Users, business model, workflows, constraints.",
+    },
+    {
+      number: "02",
+      title: "Define",
+      description: "Product scope, priorities, architecture direction.",
+    },
+    {
+      number: "03",
+      title: "Design",
+      description: "Experience, workflows, interaction, prototypes.",
+    },
+    {
+      number: "04",
+      title: "Engineer",
+      description: "Frontend, backend, mobile, APIs, infrastructure, AI.",
+    },
+    {
+      number: "05",
+      title: "Validate",
+      description: "Quality, performance, usability, security considerations.",
+    },
+    {
+      number: "06",
+      title: "Launch",
+      description: "Production readiness, deployment, monitoring.",
+    },
+    {
+      number: "07",
+      title: "Evolve",
+      description: "Feedback, analytics, optimization, new functionality.",
+    },
+  ] satisfies LifecycleStage[],
+  newProductFlow: [
+    "Idea",
+    "Problem definition",
+    "Product scope",
+    "Prototype",
+    "MVP",
+    "Production",
+    "Product evolution",
+  ],
+  existingSystemEvolution: [
+    {
+      title: "Modernization",
+      description: "Improve architecture without unnecessarily rebuilding everything.",
+    },
+    {
+      title: "Performance",
+      description: "Identify bottlenecks and improve application or infrastructure behavior.",
+    },
+    {
+      title: "Integration",
+      description: "Connect disconnected platforms, services, data, and workflows.",
+    },
+    {
+      title: "Reliability",
+      description:
+        "Improve observability, deployment, recovery, and operational resilience.",
+    },
+    {
+      title: "Mobile Expansion",
+      description: "Extend existing systems into mobile experiences.",
+    },
+    {
+      title: "AI Integration",
+      description: "Add practical AI capabilities where they make sense.",
+    },
+    {
+      title: "Cloud Evolution",
+      description:
+        "Improve infrastructure, deployment, scalability, and automation.",
+    },
+  ] satisfies TextBlock[],
+  industries: [
+    {
+      title: "Retail",
+      description: "Commerce, marketplace, inventory, customer platforms.",
+    },
+    {
+      title: "Food & Hospitality",
+      description: "Ordering, bookings, operations, loyalty.",
+    },
+    {
+      title: "Media",
+      description: "Streaming, content, subscriptions, recommendations.",
+    },
+    {
+      title: "Real Estate",
+      description: "Listings, CRM, lead workflows, analytics.",
+    },
+    {
+      title: "Healthcare & Wellness",
+      description: "Appointments, operations, customer and patient experiences.",
+    },
+    {
+      title: "Enterprise",
+      description: "Internal workflows, dashboards, integrations, automation.",
+    },
+  ] satisfies TextBlock[],
+  engagementModels: [
+    {
+      title: "New Product",
+      description: "Build from an idea or business requirement.",
+    },
+    {
+      title: "Product Extension",
+      description: "Add major functionality to an existing product.",
+    },
+    {
+      title: "Engineering Partnership",
+      description: "Support ongoing product engineering.",
+    },
+    {
+      title: "Modernization",
+      description: "Improve existing systems and infrastructure.",
+    },
+    {
+      title: "Technology Initiative",
+      description:
+        "Solve a focused architectural, cloud, mobile, or AI challenge.",
+    },
+  ] satisfies TextBlock[],
+  futureCaseStudyStructure: [
+    {
+      title: "Problem",
+      description: "What needed to be solved.",
+    },
+    {
+      title: "Approach",
+      description: "How product and technology decisions were made.",
+    },
+    {
+      title: "Architecture",
+      description: "How the system was engineered.",
+    },
+    {
+      title: "Outcome",
+      description: "Verified measurable results, once available.",
+    },
+  ] satisfies TextBlock[],
+  capabilityConnections: [
+    {
       title: "Software Engineering",
-      description: "Builds the applications and systems.",
+      description: "Applications, APIs, platforms, integrations, and engineering quality.",
       href: "/capabilities/software-engineering",
     },
     {
+      title: "Product Development",
+      description: "Discovery, UX, prototypes, product scope, and product evolution.",
+      href: "/capabilities/product-development",
+    },
+    {
       title: "Mobile Platforms",
-      description: "Extends the experience to mobile users.",
+      description: "Android, iOS, cross-platform applications, and mobile architecture.",
       href: "/capabilities/mobile-platforms",
     },
     {
       title: "Cloud & Infrastructure",
-      description: "Supports deployment, operations, and scalability.",
+      description: "Deployment, CI/CD, observability, reliability, and scalability.",
       href: "/capabilities/cloud-infrastructure",
     },
     {
       title: "Artificial Intelligence",
-      description: "Adds intelligence where it creates meaningful value.",
+      description: "AI workflows, intelligent search, automation, RAG, and evaluation.",
       href: "/capabilities/artificial-intelligence",
     },
   ] satisfies CapabilityConnection[],
-  lifecycle: [
-    { number: "01", title: "Explore", description: "Understand the opportunity, users, and requirements." },
-    { number: "02", title: "Define", description: "Define the product direction and major capabilities." },
-    { number: "03", title: "Design", description: "Design the experience, workflows, and technical structure." },
-    { number: "04", title: "Build", description: "Develop the product and supporting systems." },
-    { number: "05", title: "Integrate", description: "Connect relevant APIs, services, and business systems." },
-    { number: "06", title: "Launch", description: "Prepare the product for real-world use." },
-    { number: "07", title: "Learn", description: "Observe how the product is used." },
-    { number: "08", title: "Evolve", description: "Improve as requirements and opportunities change." },
-  ] satisfies LifecycleStage[],
-  newProducts: {
-    title: "New technology products start with a problem worth solving.",
-    imagePath: "/images/work/new-products.jpg",
-    imageAlt:
-      "Abstract new digital product planning and engineering visual",
-    paragraphs: [
-      "New products can begin as business opportunities, customer needs, internal workflow gaps, new digital ventures, industry platforms, or AI-enabled possibilities.",
-      "The work is to turn that direction into a product structure, user experience, software system, operating model, and technology foundation that can evolve.",
-    ],
-    items: [
-      "New digital businesses",
-      "Startup products",
-      "SaaS platforms",
-      "Marketplaces",
-      "Consumer applications",
-      "Internal products",
-      "Industry platforms",
-      "AI-enabled products",
-    ],
-  },
-  evolution: {
-    title: "Existing technology can become the foundation for what comes next.",
-    imagePath: "/images/work/evolution.jpg",
-    imageAlt: "Abstract technology modernization and system evolution visual",
-    paragraphs: [
-      "Existing systems do not always need to be replaced. They may need clearer architecture, better workflows, stronger APIs, mobile extensions, infrastructure improvements, or carefully introduced AI capabilities.",
-      "Modernization should begin with understanding what works, what blocks progress, and which changes create the most meaningful product or operational value.",
-    ],
-    items: [
-      "Modernization",
-      "New product capabilities",
-      "API integration",
-      "Mobile extensions",
-      "Cloud improvements",
-      "Workflow redesign",
-      "AI integration",
-      "System evolution",
-    ],
-    flow: ["Existing System", "Understand", "Prioritize", "Improve", "Integrate", "Evolve"],
-  },
-  industries: [
-    {
-      title: "Commerce",
-      description: "Marketplaces, customer platforms, mobile products.",
-    },
-    {
-      title: "Food & Hospitality",
-      description: "Ordering, booking, operations, customer experiences.",
-    },
-    {
-      title: "Media & Entertainment",
-      description: "Content platforms, OTT, streaming, discovery.",
-    },
-    {
-      title: "Real Estate",
-      description: "Listings, search, CRM, lead workflows.",
-    },
-    {
-      title: "Healthcare & Wellness",
-      description: "Digital experiences, operational systems, workflow tools.",
-    },
-    {
-      title: "Education",
-      description: "Learning products, content systems, mobile experiences.",
-    },
-    {
-      title: "Business & Enterprise",
-      description: "Internal software, APIs, automation, data platforms.",
-    },
-  ] satisfies TextBlock[],
-  buildingBlocks: [
-    "Web Application",
-    "Mobile Application",
-    "Backend",
-    "APIs",
-    "Database",
-    "Authentication",
-    "Admin Platform",
-    "Content System",
-    "Notifications",
-    "Search",
-    "Analytics",
-    "Integrations",
-    "Cloud Infrastructure",
-    "AI Capabilities",
-  ],
-  principles: [
-    { title: "Start with the real requirement", description: "Technology direction should come from the problem, users, workflow, and business context." },
-    { title: "Design around users and workflows", description: "A product should match how people need to work, decide, communicate, or transact." },
-    { title: "Avoid unnecessary complexity", description: "Architecture should solve real product needs rather than perform complexity." },
-    { title: "Build connected systems", description: "Modern products often depend on APIs, data, infrastructure, integrations, and operational visibility." },
-    { title: "Think about operations early", description: "Deployment, monitoring, support, security, and reliability affect the product experience." },
-    { title: "Design for evolution", description: "Products should be able to grow as requirements, markets, and opportunities change." },
-    { title: "Use AI intentionally", description: "AI should support meaningful product or workflow value rather than exist as decoration." },
-    { title: "Keep technology maintainable", description: "Readable, maintainable systems are easier to improve over time." },
-  ] satisfies TextBlock[],
-  engagementModels: [
-    { title: "New Product Development", description: "For building a new product, platform, or application." },
-    { title: "Product Evolution", description: "For extending an existing digital product." },
-    { title: "Platform Development", description: "For larger connected systems and technology ecosystems." },
-    { title: "Technology Modernization", description: "For improving existing software and infrastructure." },
-  ] satisfies TextBlock[],
-  futureCaseStudySchema: [
-    "Project name",
-    "Industry",
-    "Challenge",
-    "Product",
-    "Capabilities used",
-    "Technology areas",
-    "Images",
-    "Outcomes",
-    "Case study link",
-  ],
   faqs: [
     {
-      question: "What types of software can BIMAL GLOBAL build?",
+      question: "What types of products can BIMAL GLOBAL build?",
       answer:
-        "BIMAL GLOBAL can build digital platforms, software products, mobile applications, business systems, APIs, backend platforms, content systems, and AI-enabled products.",
+        "BIMAL GLOBAL can build digital products, platforms, mobile applications, business systems, APIs, cloud systems, and AI-enabled applications around real requirements.",
     },
     {
-      question: "Can you build a complete digital product?",
+      question: "Do you only build new products?",
       answer:
-        "Yes. A complete product can combine product thinking, software engineering, mobile platforms, cloud infrastructure, and AI where it creates meaningful value.",
+        "No. Existing systems can also be modernized, extended, integrated, optimized, and evolved.",
     },
     {
-      question: "Do you work on new product ideas?",
+      question: "Can you build an entire product?",
       answer:
-        "Yes. New product work can start with exploration, requirements, product structure, experience design, technical architecture, and development planning.",
+        "Work can span product definition, engineering, mobile, cloud, AI, launch, and evolution depending on the requirements.",
     },
     {
-      question: "Can you improve an existing software product?",
+      question: "Do you have a fixed technology stack?",
       answer:
-        "Yes. Existing products can be modernized, extended, integrated, redesigned, or evolved through focused product and engineering work.",
+        "Technology should follow product requirements rather than being selected simply because it is fashionable.",
     },
     {
-      question: "Can you build a mobile application alongside a web platform?",
+      question: "Are the examples on this page client projects?",
       answer:
-        "Yes. Mobile applications can be designed alongside web platforms, backend systems, APIs, authentication, notifications, and infrastructure.",
-    },
-    {
-      question: "Can you build platforms for specific industries?",
-      answer:
-        "Yes. The same technology capabilities can support different industry contexts, including commerce, hospitality, media, real estate, education, healthcare and wellness, and enterprise operations.",
-    },
-    {
-      question: "Can AI be integrated into a product?",
-      answer:
-        "Yes. AI can be integrated where it creates meaningful value for search, assistance, content workflows, information processing, automation, or decision support.",
-    },
-    {
-      question: "Where can I see client case studies?",
-      answer:
-        "Selected project stories will be published when they become available for public sharing. This page currently presents illustrative solution possibilities, not client case studies.",
+        "No. The scenarios are illustrative examples of technology possibilities and should not be interpreted as client case studies unless explicitly identified as such.",
     },
   ] satisfies FaqItem[],
   finalCta: {
-    title: "What could your next product become?",
+    title: "Have a product or technology challenge?",
     summary:
-      "Whether you are starting with an idea, improving an existing system, or building a larger digital platform, BIMAL GLOBAL can help connect product thinking, software engineering, mobile technology, infrastructure, and AI.",
+      "Start with the problem. We can explore the product, architecture, engineering, mobile, cloud, and AI possibilities together.",
     primaryCta: { href: "/contact", label: "Start a Conversation" },
-    secondaryCta: { href: "/capabilities", label: "Explore Capabilities" },
+    secondaryCta: { href: "/company/how-we-work", label: "Explore How We Work" },
   },
 } as const;
