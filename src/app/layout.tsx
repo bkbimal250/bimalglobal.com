@@ -14,6 +14,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
 export const metadata: Metadata = {
   applicationName: siteConfig.name,
   description: defaultSeo.description,
+  icons: {
+    icon: "/icons/favicon.ico",
+    shortcut: "/icons/favicon.ico",
+  },
   metadataBase: new URL(siteUrl),
   openGraph: {
     description: defaultSeo.description,
