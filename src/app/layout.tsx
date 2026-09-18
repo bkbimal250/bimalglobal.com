@@ -26,6 +26,9 @@ export const metadata: Metadata = {
     type: "website",
   },
   title: defaultSeo.title,
+  verification: {
+    google: "E0-PSdMJS1v1OzCCW60RQJh0dDC9lX2-VS1jyVVZ22Q",
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
