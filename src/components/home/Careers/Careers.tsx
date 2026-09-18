@@ -147,10 +147,7 @@ function CareersVisual() {
 
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
-          Future team image path
-        </p>
-        <p className="mt-3 max-w-sm break-words text-xs leading-5 text-[#f7f7f2]/78">
-          {careersImagePath}
+          Team
         </p>
       </div>
     </aside>

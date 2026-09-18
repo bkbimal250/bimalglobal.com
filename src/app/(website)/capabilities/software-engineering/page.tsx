@@ -353,7 +353,7 @@ function VisualPanel({ alt, imagePath, label, meta, tall = false }: { alt?: stri
       <div aria-hidden="true" className="absolute left-1/2 top-1/2 h-[17rem] w-[17rem] -translate-x-1/2 -translate-y-1/2 border border-[#f7f7f2]/20 sm:h-[25rem] sm:w-[25rem]" />
       <div aria-hidden="true" className="absolute bottom-16 right-10 h-32 w-32 border-[1.5rem] border-[#e35d3f] opacity-90 sm:h-44 sm:w-44" />
       <div className="absolute inset-x-7 top-7 flex items-center justify-between border-t border-[#f7f7f2]/30 pt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9"><span>{label}</span><span>{meta}</span></div>
-      <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9"><p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">Replace image at</p><p className="mt-3 max-w-sm break-words text-xs leading-5 text-[#f7f7f2]/78">{imagePath}</p></div>
+      <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9"><p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">Visual</p></div>
     </div>
   );
 }

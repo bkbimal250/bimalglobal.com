@@ -453,7 +453,7 @@ function DiscoverySection() {
           </div>
           <VisualPanel
             imagePath="/images/company/how-we-work/discovery.jpg"
-            label="Replace image at /public/images/company/how-we-work/discovery.jpg"
+            label="Discovery visual"
           />
         </div>
       </Container>

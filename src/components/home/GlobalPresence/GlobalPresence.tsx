@@ -77,13 +77,14 @@ export function GlobalPresence() {
 function PresenceVisual() {
   return (
     <div
-      aria-label="Abstract global presence visual"
+      aria-label="Global presence visual"
       className="relative min-h-[24rem] overflow-hidden bg-[#202927] text-[#f7f7f2] motion-safe:animate-[hero-reveal_1000ms_220ms_ease-out_both] sm:min-h-[34rem] lg:min-h-[45rem]"
       data-image-path={globalVisualPath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.08), rgba(23, 24, 23, 0.92))`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.08), rgba(23, 24, 23, 0.92)), url("${globalVisualPath}")`,
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
@@ -102,10 +103,10 @@ function PresenceVisual() {
 
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
-          Optional global visual
+          Global presence
         </p>
-        <p className="mt-3 max-w-sm break-words text-xs leading-5 text-[#f7f7f2]/78">
-          {globalVisualPath}
+        <p className="mt-3 max-w-sm text-xs leading-5 text-[#f7f7f2]/78">
+          Regional roots, worldwide perspective.
         </p>
       </div>
     </div>

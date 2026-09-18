@@ -72,8 +72,9 @@ function WorkCard({ isFeatured, item }: { isFeatured: boolean; item: WorkItem })
         }`}
         role="img"
         style={{
-          backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.12), rgba(23, 24, 23, 0.86))`,
+          backgroundImage: `linear-gradient(145deg, rgba(23, 24, 23, 0.12), rgba(23, 24, 23, 0.86)), url("${item.imagePath}")`,
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}
       >
@@ -132,17 +133,18 @@ function NoPublicWorkState() {
 }
 
 function ProjectPlaceholderVisual() {
-  const imagePath = "/images/work/project-01.jpg";
+  const imagePath = "/images/home/work/project-01.jpg";
 
   return (
     <aside
-      aria-label="Selected work visual placeholder"
+      aria-label="Selected work visual"
       className="relative min-h-[20rem] overflow-hidden bg-[#17211f] text-[#f7f7f2] motion-safe:animate-[hero-reveal_1000ms_220ms_ease-out_both] sm:min-h-[27rem] lg:min-h-[35rem]"
       data-image-path={imagePath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.16), rgba(23, 33, 31, 0.92))`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.16), rgba(23, 33, 31, 0.92)), url("${imagePath}")`,
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
@@ -157,10 +159,10 @@ function ProjectPlaceholderVisual() {
 
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
-          Future image path
+          Selected work
         </p>
-        <p className="mt-3 max-w-sm break-words text-xs leading-5 text-[#f7f7f2]/78">
-          {imagePath}
+        <p className="mt-3 max-w-sm text-xs leading-5 text-[#f7f7f2]/78">
+          Public case study preview
         </p>
       </div>
     </aside>

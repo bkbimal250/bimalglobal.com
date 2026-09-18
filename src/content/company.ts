@@ -165,7 +165,7 @@ export const companyOverviewPage = {
       "BIMAL GLOBAL has three founders. Public founder details can be expanded as verified leadership content becomes available.",
     profiles: [
       {
-        label: "Verified Profile",
+        label: "Leadership",
         name: "Bimal Vishwakarma",
         role: "CEO",
         note: "Verified leadership information available in the project.",

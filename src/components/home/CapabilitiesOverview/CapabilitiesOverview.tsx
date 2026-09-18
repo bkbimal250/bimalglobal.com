@@ -169,13 +169,14 @@ function CapabilityItem({
 function CapabilityVisual({ capability }: { capability: Capability }) {
   return (
     <aside
-      aria-label={`${capability.name} visual placeholder`}
+      aria-label={`${capability.name} visual`}
       className="relative min-h-[20rem] overflow-hidden bg-[#202927] motion-safe:animate-[hero-reveal_1000ms_220ms_ease-out_both] sm:min-h-[27rem] lg:sticky lg:top-10 lg:min-h-[34rem]"
       data-image-path={capability.imagePath}
       key={capability.href}
       style={{
-        backgroundImage: `linear-gradient(140deg, rgba(23, 24, 23, 0.18), rgba(23, 24, 23, 0.92))`,
+        backgroundImage: `linear-gradient(140deg, rgba(23, 24, 23, 0.18), rgba(23, 24, 23, 0.92)), url("${capability.imagePath}")`,
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
@@ -190,10 +191,10 @@ function CapabilityVisual({ capability }: { capability: Capability }) {
 
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
-          Replace image at
+          {capability.name}
         </p>
-        <p className="mt-3 max-w-sm break-words text-xs leading-5 text-[#f7f7f2]/78">
-          {capability.imagePath}
+        <p className="mt-3 max-w-sm text-xs leading-5 text-[#f7f7f2]/78">
+          {capability.description}
         </p>
       </div>
     </aside>

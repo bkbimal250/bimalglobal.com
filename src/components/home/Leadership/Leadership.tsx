@@ -94,8 +94,9 @@ function LeadershipPortrait({ leader }: { leader: Leader }) {
       data-image-path={leader.imagePath}
       role="img"
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.1), rgba(23, 33, 31, 0.9))`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.1), rgba(23, 33, 31, 0.9)), url("${leader.imagePath}")`,
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
@@ -105,15 +106,15 @@ function LeadershipPortrait({ leader }: { leader: Leader }) {
 
       <div className="absolute inset-x-7 top-7 flex items-center justify-between border-t border-[#f7f7f2]/30 pt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
         <span>Founder portrait</span>
-        <span>Verified profile</span>
+        <span>Leadership</span>
       </div>
 
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
-          Replace image at
+          {leader.name}
         </p>
-        <p className="mt-3 max-w-sm break-words text-xs leading-5 text-[#f7f7f2]/78">
-          {leader.imagePath}
+        <p className="mt-3 max-w-sm text-xs leading-5 text-[#f7f7f2]/78">
+          {leader.role}
         </p>
       </div>
     </div>
