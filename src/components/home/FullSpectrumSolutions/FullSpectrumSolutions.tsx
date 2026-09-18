@@ -190,13 +190,14 @@ function LifecycleItem({
 function LifecycleVisual({ stage }: { stage: LifecycleStage }) {
   return (
     <aside
-      aria-label={`${stage.name} lifecycle visual placeholder`}
+      aria-label={`${stage.name} lifecycle visual`}
       className="relative min-h-[20rem] overflow-hidden bg-[#17211f] text-[#f7f7f2] motion-safe:animate-[hero-reveal_1000ms_220ms_ease-out_both] sm:min-h-[27rem] lg:sticky lg:top-10 lg:min-h-[36rem]"
       data-image-path={stage.imagePath}
       key={stage.name}
       style={{
-        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.14), rgba(23, 33, 31, 0.9))`,
+        backgroundImage: `linear-gradient(145deg, rgba(23, 33, 31, 0.14), rgba(23, 33, 31, 0.9)), url("${stage.imagePath}")`,
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
@@ -213,10 +214,10 @@ function LifecycleVisual({ stage }: { stage: LifecycleStage }) {
 
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
-          Replace image at
+          {stage.name}
         </p>
-        <p className="mt-3 max-w-sm break-words text-xs leading-5 text-[#f7f7f2]/78">
-          {stage.imagePath}
+        <p className="mt-3 max-w-sm text-xs leading-5 text-[#f7f7f2]/78">
+          {stage.description}
         </p>
       </div>
     </aside>

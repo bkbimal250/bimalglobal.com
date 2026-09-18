@@ -34,7 +34,7 @@ export const leaders: Leader[] = [
     type: "founder",
     specialty: "Company Direction",
     featured: true,
-    imagePath: "/images/company/leadership/bimal-vishwakarma.jpg",
+    imagePath: "/images/home/leadership/bimal-vishwakarma.jpg",
     imageAlt: "Portrait of Bimal Vishwakarma",
     bio: "Bimal Vishwakarma is the Founder and CEO of BIMAL GLOBAL, leading the company's direction across technology, products, and long-term growth. His focus is on building digital products, software platforms, and technology systems that can evolve with changing business and market needs.",
     focusAreas: [
@@ -53,7 +53,7 @@ export const leaders: Leader[] = [
     type: "founder",
     specialty: "Technology & Engineering",
     featured: false,
-    imagePath: "/images/company/leadership/founder-02.jpg",
+    imagePath: "/images/home/leadership/founder-02.jpg",
     imageAlt: "Replaceable portrait placeholder for Founder Profile Two",
     bio: "Focused on engineering systems, technical foundations, and building reliable technology for ambitious products.",
     focusAreas: [
@@ -70,7 +70,7 @@ export const leaders: Leader[] = [
     type: "founder",
     specialty: "Product & Growth",
     featured: false,
-    imagePath: "/images/company/leadership/founder-03.jpg",
+    imagePath: "/images/home/leadership/founder-03.jpg",
     imageAlt: "Replaceable portrait placeholder for Founder Profile Three",
     bio: "Focused on product thinking, business opportunities, and shaping technology into meaningful experiences.",
     focusAreas: [
@@ -90,7 +90,7 @@ export const leadershipPage = {
     highlight: "takes direction.",
     summary:
       "BIMAL GLOBAL is guided by a founding team focused on building ambitious technology products, systems, and platforms with a long-term perspective.",
-    imagePath: "/images/company/leadership/leadership-hero.jpg",
+    imagePath: "/images/home/leadership/leadership-hero.jpg",
     imageAlt: "Abstract leadership and technology direction visual",
   },
   introduction: {
@@ -149,7 +149,7 @@ export const leadershipPage = {
   buildingCompany: {
     heading: "A company is built",
     highlight: "through what it enables.",
-    imagePath: "/images/company/leadership/building-company.jpg",
+    imagePath: "/images/home/leadership/building-company.jpg",
     paragraphs: [
       "BIMAL GLOBAL aims to create an environment where people can explore ambitious ideas, solve difficult problems, and build meaningful technology.",
       "The company is still writing its story through the products, systems, disciplines, and people it brings together over time.",
