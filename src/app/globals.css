@@ -15,6 +15,31 @@ body {
   color: var(--foreground);
   margin: 0;
   font-family: var(--font-sans);
+<<<<<<< HEAD
+=======
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer base {
+  h1, h2, h3, h4 {
+    text-wrap: balance;
+    overflow-wrap: break-word;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  :where(section[id], h1[id], h2[id], h3[id]) {
+    scroll-margin-top: 8rem;
+  }
+
+  :where(a, button, input, textarea, select):focus-visible {
+    outline: 2px solid #c34228;
+    outline-offset: 4px;
+  }
+>>>>>>> origin/develop
 }
 
 @keyframes hero-rise {
@@ -31,6 +56,34 @@ body {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+<<<<<<< HEAD
     scroll-behavior: auto !important;
   }
 }
+=======
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@keyframes hero-slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background: #DC5235;
+  color: #FFFFFF;
+}
+>>>>>>> origin/develop

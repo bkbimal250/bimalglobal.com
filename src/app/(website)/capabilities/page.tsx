@@ -49,7 +49,11 @@ function CapabilitiesHero() {
           </p>
           <h1
             id="capabilities-page-title"
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3.5rem,8vw,8.75rem)] leading-[0.9] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+=======
+            className="mt-7 font-serif text-[clamp(2.75rem,5.8vw,5.5rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+>>>>>>> origin/develop
           >
             {hero.heading}
             <span className="block text-[#e35d3f]">{hero.highlight}</span>
@@ -154,7 +158,11 @@ function CapabilityBlock({
         <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
           {capability.number}
         </p>
+<<<<<<< HEAD
         <h3 className="mt-7 font-serif text-[clamp(3rem,7vw,7rem)] leading-[0.92] tracking-[-0.045em]">
+=======
+        <h3 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
           {capability.title}
         </h3>
         <p className="mt-8 max-w-2xl font-sans text-lg leading-8 text-[#171817]/66 sm:text-xl sm:leading-9">
@@ -280,7 +288,11 @@ function OutcomeItem({
       className="group grid gap-5 border-b border-[#171817]/15 py-8 transition-colors hover:border-[#e35d3f]/60 hover:bg-[#171817]/[0.025] sm:grid-cols-[minmax(0,0.55fr)_minmax(0,1fr)_auto] sm:gap-8 sm:py-10 lg:px-5 motion-safe:animate-[hero-rise_800ms_ease-out_both]"
       style={{ animationDelay: `${160 + index * 50}ms` }}
     >
+<<<<<<< HEAD
       <h3 className="font-serif text-[clamp(2rem,4vw,4rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+=======
+      <h3 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+>>>>>>> origin/develop
         {item.title}
       </h3>
       <p className="max-w-xl font-sans text-sm leading-7 text-[#171817]/62 sm:text-base sm:leading-8">
@@ -300,7 +312,11 @@ function TechnologyLifecycle() {
     <section className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36">
       <div className="mx-auto w-full max-w-[1440px]">
         <div className="grid grid-cols-1 gap-10 border-b border-[#f7f7f2]/15 pb-14 lg:grid-cols-[minmax(0,0.9fr)_minmax(22rem,0.62fr)] lg:items-end lg:gap-20 lg:pb-20">
+<<<<<<< HEAD
           <h2 className="font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]">
+=======
+          <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
             {lifecycle.heading}
             <span className="block text-[#e35d3f]">{lifecycle.highlight}</span>
           </h2>
@@ -330,16 +346,27 @@ function LifecycleStage({
       className="border-b border-[#f7f7f2]/15 py-8 lg:border-b-0 lg:border-r lg:px-5 lg:py-10 lg:last:border-r-0 motion-safe:animate-[hero-rise_800ms_ease-out_both]"
       style={{ animationDelay: `${160 + index * 60}ms` }}
     >
+<<<<<<< HEAD
       <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
         0{index + 1}
       </p>
       <h3 className="mt-7 font-serif text-[clamp(2.1rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+=======
+      <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
+        0{index + 1}
+      </p>
+      <h3 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
         {stage.stage}
       </h3>
       <p className="mt-5 font-sans text-sm leading-7 text-[#f7f7f2]/62">
         {stage.description}
       </p>
+<<<<<<< HEAD
       <ul className="mt-6 grid gap-2 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.18em] text-[#f7f7f2]/42">
+=======
+      <ul className="mt-6 grid gap-2 font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-[#f7f7f2]/42">
+>>>>>>> origin/develop
         {stage.capabilities.map((capability) => (
           <li key={capability}>{capability}</li>
         ))}
@@ -388,7 +415,11 @@ function EngagementItem({
       <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
         {item.number}
       </p>
+<<<<<<< HEAD
       <h3 className="mt-8 font-serif text-[clamp(2.5rem,5vw,5.25rem)] leading-none tracking-[-0.04em]">
+=======
+      <h3 className="mt-8 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
         {item.title}
       </h3>
       <p className="mt-7 max-w-md font-sans text-sm leading-7 text-[#171817]/64 sm:text-base sm:leading-8">
@@ -412,7 +443,11 @@ function TechnologyDomains() {
   return (
     <section className="px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16 lg:pb-36">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 border-y border-[#171817]/15 py-14 lg:grid-cols-[minmax(0,0.6fr)_minmax(24rem,1fr)] lg:gap-20 lg:py-20">
+<<<<<<< HEAD
         <h2 className="font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]">
+=======
+        <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
           Broad technology domains.
           <span className="block text-[#e35d3f]">Not a fixed tool list.</span>
         </h2>
@@ -424,7 +459,11 @@ function TechnologyDomains() {
           <div className="mt-8 flex flex-wrap gap-3">
             {capabilitiesPage.domains.map((domain) => (
               <span
+<<<<<<< HEAD
                 className="border border-[#171817]/15 px-4 py-3 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#171817]/58"
+=======
+                className="border border-[#171817]/15 px-4 py-3 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-[#171817]/58"
+>>>>>>> origin/develop
                 key={domain}
               >
                 {domain}
@@ -472,7 +511,11 @@ function IndustryConnection() {
         <div className="mt-10 flex flex-wrap gap-3">
           {industries.items.map((industry) => (
             <span
+<<<<<<< HEAD
               className="border border-[#f7f7f2]/14 px-4 py-3 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#f7f7f2]/62"
+=======
+              className="border border-[#f7f7f2]/14 px-4 py-3 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-[#f7f7f2]/62"
+>>>>>>> origin/develop
               key={industry}
             >
               {industry}
@@ -490,7 +533,11 @@ function EngineeringMindset() {
   return (
     <section className="px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 border-y border-[#171817]/15 py-14 lg:grid-cols-[minmax(0,0.86fr)_minmax(22rem,0.58fr)] lg:items-end lg:gap-20 lg:py-20">
+<<<<<<< HEAD
         <h2 className="font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]">
+=======
+        <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
           {mindset.heading}
           <span className="block text-[#e35d3f]">{mindset.highlight}</span>
         </h2>
@@ -510,7 +557,11 @@ function CapabilityDepth() {
   return (
     <section className="px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16 lg:pb-36">
       <div className="mx-auto w-full max-w-[1440px]">
+<<<<<<< HEAD
         <h2 className="max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]">
+=======
+        <h2 className="max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
           {depth.heading}
           <span className="block text-[#e35d3f]">{depth.highlight}</span>
         </h2>
@@ -523,7 +574,11 @@ function CapabilityDepth() {
               <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
                 0{index + 1}
               </p>
+<<<<<<< HEAD
               <p className="mt-8 font-serif text-[clamp(2.3rem,4.5vw,4.5rem)] leading-none tracking-[-0.04em]">
+=======
+              <p className="mt-8 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
                 {stage}
               </p>
             </article>
@@ -540,7 +595,11 @@ function FeaturedCapabilityCta() {
   return (
     <section className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(22rem,0.55fr)] lg:items-end lg:gap-20">
+<<<<<<< HEAD
         <h2 className="font-serif text-[clamp(3.5rem,8vw,8.75rem)] leading-[0.9] tracking-[-0.045em]">
+=======
+        <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
           {cta.heading}
           <span className="block text-[#e35d3f]">{cta.highlight}</span>
         </h2>
@@ -563,7 +622,11 @@ function FeaturedCapabilityCta() {
 
 function FocusList({ items }: { items: readonly string[] }) {
   return (
+<<<<<<< HEAD
     <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-3 border-t border-[#171817]/15 pt-6 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#171817]/48">
+=======
+    <ul className="mt-8 flex flex-wrap gap-x-5 gap-y-3 border-t border-[#171817]/15 pt-6 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-[#171817]/48">
+>>>>>>> origin/develop
       {items.map((item) => (
         <li key={item}>{item}</li>
       ))}
@@ -590,7 +653,11 @@ function SectionHeading({
         {eyebrow}
       </p>
       <h2
+<<<<<<< HEAD
         className={`mt-7 max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both] ${
+=======
+        className={`mt-7 max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both] ${
+>>>>>>> origin/develop
           inverted ? "text-[#f7f7f2]" : "text-[#171817]"
         }`}
         id={id}
@@ -645,12 +712,20 @@ function VisualPanel({
         aria-hidden="true"
         className="absolute bottom-16 right-10 h-32 w-32 border-[1.5rem] border-[#e35d3f] opacity-90 sm:h-44 sm:w-44"
       />
+<<<<<<< HEAD
       <div className="absolute inset-x-7 top-7 flex items-center justify-between border-t border-[#f7f7f2]/30 pt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+=======
+      <div className="absolute inset-x-7 top-7 flex items-center justify-between border-t border-[#f7f7f2]/30 pt-4 font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+>>>>>>> origin/develop
         <span>{label}</span>
         <span>{meta}</span>
       </div>
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
+<<<<<<< HEAD
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
+=======
+        <p className="max-w-xs text-[11px] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
+>>>>>>> origin/develop
           Visual
         </p>
       </div>

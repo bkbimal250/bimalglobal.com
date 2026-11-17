@@ -41,7 +41,11 @@ function LeadershipHero() {
           </p>
           <h1
             id="leadership-page-title"
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3.5rem,8vw,8.75rem)] leading-[0.9] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+=======
+            className="mt-7 font-serif text-[clamp(2.75rem,5.8vw,5.5rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+>>>>>>> origin/develop
           >
             {hero.heading}
             <span className="block text-[#e35d3f]">{hero.highlight}</span>
@@ -68,7 +72,11 @@ function LeadershipIntroduction() {
   return (
     <section className="px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 border-y border-[#171817]/15 py-14 lg:grid-cols-[minmax(0,0.86fr)_minmax(22rem,0.58fr)] lg:items-end lg:gap-20 lg:py-20">
+<<<<<<< HEAD
         <h2 className="font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+=======
+        <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+>>>>>>> origin/develop
           {introduction.heading}
           <span className="block text-[#e35d3f]">{introduction.highlight}</span>
         </h2>
@@ -106,7 +114,11 @@ function FounderFeature({ leader }: { leader: Leader }) {
             </p>
             <h2
               id="founder-ceo-title"
+<<<<<<< HEAD
               className="mt-7 max-w-4xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+=======
+              className="mt-7 max-w-4xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+>>>>>>> origin/develop
             >
               {founderFeature.heading}
               <span className="block text-[#e35d3f]">
@@ -117,7 +129,11 @@ function FounderFeature({ leader }: { leader: Leader }) {
 
           <div className="grid grid-cols-1 gap-10 border-y border-[#f7f7f2]/15 py-10 sm:py-12 lg:grid-cols-[minmax(0,0.62fr)_minmax(16rem,0.42fr)] lg:gap-12">
             <div>
+<<<<<<< HEAD
               <h3 className="font-serif text-[clamp(2.75rem,5.5vw,5.75rem)] leading-[0.96] tracking-[-0.04em]">
+=======
+              <h3 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.04em]">
+>>>>>>> origin/develop
                 {leader.name}
               </h3>
               <p className="mt-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-[#f7f7f2]/48">
@@ -172,10 +188,17 @@ function FounderCard({ index, leader }: { index: number; leader: Leader }) {
     >
       <ProfileVisual leader={leader} />
       <div className="p-7 sm:p-8">
+<<<<<<< HEAD
         <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
           {leader.specialty ?? leader.role}
         </p>
         <h3 className="mt-5 font-serif text-[clamp(2.35rem,4.6vw,4.75rem)] leading-[0.96] tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+=======
+        <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
+          {leader.specialty ?? leader.role}
+        </p>
+        <h3 className="mt-5 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+>>>>>>> origin/develop
           {leader.name}
         </h3>
         <p className="mt-4 font-sans text-xs font-semibold uppercase tracking-[0.18em] text-[#171817]/48">
@@ -234,7 +257,11 @@ function PrincipleItem({
       <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
         {principle.number}
       </p>
+<<<<<<< HEAD
       <h3 className="font-serif text-[clamp(2.1rem,4vw,4.25rem)] leading-none tracking-[-0.04em]">
+=======
+      <h3 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
         {principle.title}
       </h3>
       <p className="max-w-2xl self-end font-sans text-sm leading-7 text-[#171817]/64 sm:text-base sm:leading-8">
@@ -257,7 +284,11 @@ function BuildingCompany() {
           tall
         />
         <div className="border-y border-[#171817]/15 py-12 sm:py-16 lg:py-20">
+<<<<<<< HEAD
           <h2 className="font-serif text-[clamp(3rem,7vw,7rem)] leading-[0.92] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+=======
+          <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+>>>>>>> origin/develop
             {buildingCompany.heading}
             <span className="block text-[#e35d3f]">
               {buildingCompany.highlight}
@@ -353,7 +384,11 @@ function LookForward() {
   return (
     <section className="px-6 py-20 sm:px-10 sm:py-28 lg:px-16 lg:py-36">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 border-y border-[#171817]/15 py-14 lg:grid-cols-[minmax(0,0.86fr)_minmax(22rem,0.58fr)] lg:items-end lg:gap-20 lg:py-20">
+<<<<<<< HEAD
         <h2 className="font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+=======
+        <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+>>>>>>> origin/develop
           {forward.heading}
           <span className="block text-[#e35d3f]">{forward.highlight}</span>
         </h2>
@@ -377,7 +412,11 @@ function LeadershipCta() {
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f] motion-safe:animate-[hero-rise_700ms_ease-out_both]">
             {cta.eyebrow}
           </p>
+<<<<<<< HEAD
           <h2 className="mt-7 font-serif text-[clamp(3.5rem,8vw,8.75rem)] leading-[0.9] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]">
+=======
+          <h2 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]">
+>>>>>>> origin/develop
             {cta.heading}
             <span className="block text-[#e35d3f]">{cta.highlight}</span>
           </h2>
@@ -421,7 +460,11 @@ function FocusAreas({
 }) {
   return (
     <ul
+<<<<<<< HEAD
       className={`mt-8 flex flex-wrap gap-x-5 gap-y-3 border-t pt-6 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] ${
+=======
+      className={`mt-8 flex flex-wrap gap-x-5 gap-y-3 border-t pt-6 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] ${
+>>>>>>> origin/develop
         inverted
           ? "border-[#f7f7f2]/15 text-[#f7f7f2]/54"
           : "border-[#171817]/15 text-[#171817]/48"
@@ -453,7 +496,11 @@ function SectionHeading({
         {eyebrow}
       </p>
       <h2
+<<<<<<< HEAD
         className={`mt-7 max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both] ${
+=======
+        className={`mt-7 max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both] ${
+>>>>>>> origin/develop
           inverted ? "text-[#f7f7f2]" : "text-[#171817]"
         }`}
         id={id}
@@ -492,7 +539,11 @@ function ProfileVisual({ leader }: { leader: Leader }) {
         aria-hidden="true"
         className="absolute bottom-8 right-8 h-24 w-24 border-[1.15rem] border-[#e35d3f] opacity-90 sm:h-32 sm:w-32"
       />
+<<<<<<< HEAD
       <p className="absolute inset-x-7 top-7 border-t border-[#f7f7f2]/30 pt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-8">
+=======
+      <p className="absolute inset-x-7 top-7 border-t border-[#f7f7f2]/30 pt-4 font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-8">
+>>>>>>> origin/develop
         {leader.role}
       </p>
     </div>
@@ -540,12 +591,20 @@ function VisualPanel({
         aria-hidden="true"
         className="absolute bottom-16 right-10 h-32 w-32 border-[1.5rem] border-[#e35d3f] opacity-90 sm:h-44 sm:w-44"
       />
+<<<<<<< HEAD
       <div className="absolute inset-x-7 top-7 flex items-center justify-between border-t border-[#f7f7f2]/30 pt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+=======
+      <div className="absolute inset-x-7 top-7 flex items-center justify-between border-t border-[#f7f7f2]/30 pt-4 font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+>>>>>>> origin/develop
         <span>{label}</span>
         <span>{meta}</span>
       </div>
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
+<<<<<<< HEAD
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
+=======
+        <p className="max-w-xs text-[11px] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
+>>>>>>> origin/develop
           Visual
         </p>
       </div>

@@ -59,7 +59,11 @@ function Hero() {
             {hero.eyebrow}
           </p>
           <h1
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3.35rem,7.8vw,8.5rem)] leading-[0.9] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+=======
+            className="mt-7 font-serif text-[clamp(2.75rem,5.8vw,5.5rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+>>>>>>> origin/develop
             id="artificial-intelligence-title"
           >
             {hero.title}
@@ -97,7 +101,11 @@ function Overview() {
             Overview
           </p>
           <h2
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+            className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
             id="ai-overview-title"
           >
             {overview.title}
@@ -213,7 +221,11 @@ function FeatureWithVisual({
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
             {section.eyebrow}
           </p>
+<<<<<<< HEAD
           <h2 className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]">
+=======
+          <h2 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
             {section.title}
           </h2>
           <p className={`mt-8 max-w-3xl font-sans text-lg leading-8 sm:text-xl sm:leading-9 ${dark ? "text-[#f7f7f2]/66" : "text-[#171817]/66"}`}>
@@ -250,7 +262,11 @@ function CompactFeature({ dark = false, section }: { dark?: boolean; section: Fe
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
             {section.eyebrow}
           </p>
+<<<<<<< HEAD
           <h2 className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]">
+=======
+          <h2 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
             {section.title}
           </h2>
           <p className={`mt-8 max-w-2xl font-sans text-base leading-8 sm:text-lg sm:leading-9 ${dark ? "text-[#f7f7f2]/66" : "text-[#171817]/66"}`}>
@@ -281,7 +297,11 @@ function ConnectedCapabilities() {
         <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-3">
           {artificialIntelligencePage.connections.map((item) => (
             <article className="border border-[#171817]/15 p-7 sm:p-8" key={item.title}>
+<<<<<<< HEAD
               <h3 className="font-serif text-[clamp(2.2rem,4vw,4.25rem)] leading-none tracking-[-0.04em]">
+=======
+              <h3 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
                 {item.title}
               </h3>
               <p className="mt-6 font-sans text-sm leading-7 text-[#171817]/64 sm:text-base sm:leading-8">
@@ -311,7 +331,11 @@ function ResponsibleAI() {
             Responsible AI Considerations
           </p>
           <h2
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+            className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
             id="responsible-ai-title"
           >
             {responsibleAI.title}
@@ -338,7 +362,11 @@ function Lifecycle() {
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <h2
+<<<<<<< HEAD
           className="max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+          className="max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
           id="ai-lifecycle-title"
         >
           From opportunity to evolving AI capability
@@ -350,10 +378,17 @@ function Lifecycle() {
               key={stage.number}
               style={{ animationDelay: `${160 + index * 60}ms` }}
             >
+<<<<<<< HEAD
               <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
                 {stage.number}
               </p>
               <h3 className="mt-7 font-serif text-[clamp(2.1rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+=======
+              <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
+                {stage.number}
+              </p>
+              <h3 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
                 {stage.title}
               </h3>
               <p className="mt-5 font-sans text-sm leading-7 text-[#f7f7f2]/62">
@@ -401,7 +436,11 @@ function TechnologyDomains() {
             Technology Domains
           </p>
           <h2
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+            className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
             id="ai-technology-title"
           >
             Artificial intelligence technology domains
@@ -427,7 +466,11 @@ function WhenToWork() {
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <h2
+<<<<<<< HEAD
           className="max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+          className="max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
           id="when-ai-title"
         >
           When AI needs to become part of the product
@@ -450,7 +493,11 @@ function EngagementModels() {
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <h2
+<<<<<<< HEAD
           className="max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+          className="max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
           id="ai-engagement-title"
         >
           Ways to build AI-enabled products
@@ -464,7 +511,11 @@ function EngagementModels() {
               <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
                 0{index + 1}
               </p>
+<<<<<<< HEAD
               <h3 className="mt-8 font-serif text-[clamp(2.5rem,5vw,5.25rem)] leading-none tracking-[-0.04em]">
+=======
+              <h3 className="mt-8 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
                 {item.title}
               </h3>
               <p className="mt-7 font-sans text-sm leading-7 text-[#171817]/64 sm:text-base sm:leading-8">
@@ -493,7 +544,11 @@ function UseCases() {
             Illustrative use cases - not client case studies.
           </p>
           <h2
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+            className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
             id="ai-use-cases-title"
           >
             What practical AI can support
@@ -513,7 +568,11 @@ function RelatedCapabilities() {
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <h2
+<<<<<<< HEAD
           className="max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+          className="max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
           id="related-ai-capabilities-title"
         >
           Related capabilities
@@ -563,7 +622,11 @@ function FinalCta() {
   return (
     <section className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(22rem,0.55fr)] lg:items-end lg:gap-20">
+<<<<<<< HEAD
         <h2 className="font-serif text-[clamp(3.5rem,8vw,8.75rem)] leading-[0.9] tracking-[-0.045em]">
+=======
+        <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
           {finalCta.title}
         </h2>
         <div>
@@ -639,7 +702,11 @@ function EditorialItem({ index, item }: { index: number; item: TextBlock }) {
       <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
         {String(index + 1).padStart(2, "0")}
       </p>
+<<<<<<< HEAD
       <h3 className="font-serif text-[clamp(2rem,4vw,4rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+=======
+      <h3 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+>>>>>>> origin/develop
         {item.title}
       </h3>
       <p className="max-w-xl font-sans text-sm leading-7 text-[#171817]/62 sm:text-base sm:leading-8">
@@ -655,7 +722,11 @@ function CapabilityLink({ item }: { item: RelatedCapability }) {
       className="group border border-[#f7f7f2]/15 p-7 transition-colors hover:border-[#e35d3f]/70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e35d3f] sm:p-8"
       href={item.href}
     >
+<<<<<<< HEAD
       <h3 className="font-serif text-[clamp(2.2rem,4vw,4.25rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+=======
+      <h3 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+>>>>>>> origin/develop
         {item.title}
       </h3>
       <p className="mt-6 font-sans text-sm leading-7 text-[#f7f7f2]/64 sm:text-base sm:leading-8">
@@ -705,7 +776,11 @@ function FocusList({
 }) {
   return (
     <ul
+<<<<<<< HEAD
       className={`mt-8 flex flex-wrap gap-x-5 gap-y-3 border-t pt-6 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] ${dark ? "border-[#f7f7f2]/15 text-[#f7f7f2]/50" : "border-[#171817]/15 text-[#171817]/48"}`}
+=======
+      className={`mt-8 flex flex-wrap gap-x-5 gap-y-3 border-t pt-6 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] ${dark ? "border-[#f7f7f2]/15 text-[#f7f7f2]/50" : "border-[#171817]/15 text-[#171817]/48"}`}
+>>>>>>> origin/develop
     >
       {items.map((item) => (
         <li key={item}>{item}</li>
@@ -719,7 +794,11 @@ function TagCloud({ dark = false, items }: { dark?: boolean; items: readonly str
     <div className="mt-8 flex flex-wrap gap-3">
       {items.map((item) => (
         <span
+<<<<<<< HEAD
           className={`border px-4 py-3 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.2em] ${dark ? "border-[#f7f7f2]/15 text-[#f7f7f2]/58" : "border-[#171817]/15 text-[#171817]/58"}`}
+=======
+          className={`border px-4 py-3 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] ${dark ? "border-[#f7f7f2]/15 text-[#f7f7f2]/58" : "border-[#171817]/15 text-[#171817]/58"}`}
+>>>>>>> origin/develop
           key={item}
         >
           {item}
@@ -736,7 +815,11 @@ function SectionHeading({ eyebrow, id, title }: { eyebrow: string; id: string; t
         {eyebrow}
       </p>
       <h2
+<<<<<<< HEAD
         className="mt-7 max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+        className="mt-7 max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
         id={id}
       >
         {title}
@@ -782,12 +865,20 @@ function VisualPanel({
         aria-hidden="true"
         className="absolute bottom-16 right-10 h-32 w-32 border-[1.5rem] border-[#e35d3f] opacity-90 sm:h-44 sm:w-44"
       />
+<<<<<<< HEAD
       <div className="absolute inset-x-7 top-7 flex items-center justify-between gap-5 border-t border-[#f7f7f2]/30 pt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+=======
+      <div className="absolute inset-x-7 top-7 flex items-center justify-between gap-5 border-t border-[#f7f7f2]/30 pt-4 font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+>>>>>>> origin/develop
         <span>{label}</span>
         <span className="text-right">{meta}</span>
       </div>
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
+<<<<<<< HEAD
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
+=======
+        <p className="max-w-xs text-[11px] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
+>>>>>>> origin/develop
           Visual
         </p>
       </div>

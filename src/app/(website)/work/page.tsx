@@ -55,7 +55,11 @@ function Hero() {
             {hero.eyebrow}
           </p>
           <h1
+<<<<<<< HEAD
             className="mt-8 max-w-6xl font-serif text-[clamp(3.75rem,8.8vw,8.9rem)] leading-[0.88] tracking-[-0.045em]"
+=======
+            className="mt-8 max-w-6xl font-serif text-[clamp(2.75rem,5.8vw,5.5rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
             id="work-title"
           >
             {hero.title}
@@ -125,7 +129,11 @@ function ProductTypeRow({ index, item }: { index: number; item: ProductType }) {
         {String(index + 1).padStart(2, "0")}
       </p>
       <div>
+<<<<<<< HEAD
         <p className="font-sans text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-[#55584f]">
+=======
+        <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.18em] text-[#55584f]">
+>>>>>>> origin/develop
           {item.label}
         </p>
         <h3 className="mt-3 font-serif text-[clamp(2rem,3.6vw,3.7rem)] leading-none tracking-[-0.04em]">
@@ -164,7 +172,11 @@ function ScenarioCard({ scenario }: { scenario: SolutionScenario }) {
       <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
         Scenario {scenario.number}
       </p>
+<<<<<<< HEAD
       <h3 className="mt-7 font-serif text-[clamp(2.5rem,5vw,5.25rem)] leading-none tracking-[-0.04em]">
+=======
+      <h3 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
         {scenario.title}
       </h3>
       <p className="mt-6 font-sans text-base leading-8 text-[#55584f]">
@@ -207,10 +219,17 @@ function ComplexityCard({
       <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
         {String(index + 1).padStart(2, "0")}
       </p>
+<<<<<<< HEAD
       <h3 className="mt-8 font-serif text-[clamp(2.35rem,4vw,4.4rem)] leading-none tracking-[-0.04em] text-[#f7f7f2]">
         {stage.title}
       </h3>
       <p className="mt-4 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-[#f7f7f2]/42">
+=======
+      <h3 className="mt-8 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em] text-[#f7f7f2]">
+        {stage.title}
+      </h3>
+      <p className="mt-4 font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-[#f7f7f2]/42">
+>>>>>>> origin/develop
         {stage.scope}
       </p>
       <p className="mt-5 font-sans text-sm leading-7 text-[#f7f7f2]/64">
@@ -253,7 +272,11 @@ function LayerCard({ layer }: { layer: TechnologyLayer }) {
       <div className="mt-6 flex flex-wrap gap-2">
         {layer.examples.map((example) => (
           <span
+<<<<<<< HEAD
             className="border border-[#171817]/14 px-3 py-2 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-[#55584f]"
+=======
+            className="border border-[#171817]/14 px-3 py-2 font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-[#55584f]"
+>>>>>>> origin/develop
             key={example}
           >
             {example}
@@ -288,7 +311,11 @@ function LifecycleSection() {
         </div>
         <div className="mt-16 grid gap-10 border-t border-[#f7f7f2]/15 pt-12 lg:grid-cols-[0.72fr_1fr] lg:items-center">
           <div>
+<<<<<<< HEAD
             <h3 className="font-serif text-[clamp(2.8rem,5.8vw,6rem)] leading-[0.92] tracking-[-0.045em] text-[#f7f7f2]">
+=======
+            <h3 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] text-[#f7f7f2]">
+>>>>>>> origin/develop
               The objective is not simply to build features.
             </h3>
             <p className="mt-6 max-w-2xl font-sans text-base leading-8 text-[#f7f7f2]/66 sm:text-lg">
@@ -442,7 +469,11 @@ function FinalCta() {
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.28em] text-[#e35d3f]">
               Start With the Problem
             </p>
+<<<<<<< HEAD
             <h2 className="mt-7 font-serif text-[clamp(3.2rem,7vw,7.25rem)] leading-[0.9] tracking-[-0.045em]">
+=======
+            <h2 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
               {finalCta.title}
             </h2>
             <p className="mt-7 max-w-2xl font-sans text-lg leading-8 text-[#f7f7f2]/68 sm:text-xl sm:leading-9">
@@ -562,7 +593,11 @@ function TagCloud({ items }: { items: readonly string[] }) {
     <div className="mt-8 flex flex-wrap gap-3">
       {items.map((item) => (
         <span
+<<<<<<< HEAD
           className="border border-[#171817]/15 px-4 py-3 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.16em] text-[#55584f]"
+=======
+          className="border border-[#171817]/15 px-4 py-3 font-sans text-[11px] font-semibold uppercase tracking-[0.16em] text-[#55584f]"
+>>>>>>> origin/develop
           key={item}
         >
           {item}
@@ -589,7 +624,11 @@ function SectionHeading({
         {eyebrow}
       </p>
       <h2
+<<<<<<< HEAD
         className={`mt-5 font-serif text-[clamp(2.8rem,5.8vw,6rem)] leading-[0.92] tracking-[-0.045em] ${
+=======
+        className={`mt-5 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] ${
+>>>>>>> origin/develop
           light ? "text-[#f7f7f2]" : "text-[#171817]"
         }`}
       >

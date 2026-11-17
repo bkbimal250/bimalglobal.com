@@ -20,7 +20,11 @@ export function WorkFaq({ items }: { items: readonly FaqItem[] }) {
             <button
               aria-controls={panelId}
               aria-expanded={open}
+<<<<<<< HEAD
               className="flex w-full items-center justify-between gap-6 py-7 text-left font-serif text-[clamp(1.7rem,3.8vw,3.5rem)] leading-none tracking-[-0.04em] text-[#171817] transition-colors hover:text-[#e35d3f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e35d3f]"
+=======
+              className="flex w-full items-center justify-between gap-6 py-7 text-left font-serif text-[clamp(1.25rem,2.2vw,2rem)] leading-snug tracking-[-0.04em] text-[#171817] transition-colors hover:text-[#e35d3f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e35d3f]"
+>>>>>>> origin/develop
               onClick={() =>
                 setOpenQuestion((value) =>
                   value === item.question ? "" : item.question,

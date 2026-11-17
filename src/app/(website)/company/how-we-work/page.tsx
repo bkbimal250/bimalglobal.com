@@ -360,7 +360,11 @@ function Hero() {
           <p className="mb-8 text-xs font-semibold uppercase tracking-[0.42em] text-white/75">
             {hero.eyebrow}
           </p>
+<<<<<<< HEAD
           <h1 className="max-w-5xl text-5xl font-medium leading-[0.96] tracking-normal text-white sm:text-6xl lg:text-8xl">
+=======
+          <h1 className="max-w-5xl text-[clamp(2.75rem,5.8vw,5.5rem)] font-medium leading-[1.08] tracking-[-0.035em] text-white">
+>>>>>>> origin/develop
             {hero.title}
           </h1>
           <p className="mt-8 max-w-3xl text-lg leading-8 text-white/78 sm:text-xl">

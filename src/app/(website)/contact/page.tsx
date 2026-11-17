@@ -41,7 +41,11 @@ function Hero() {
             {hero.eyebrow}
           </p>
           <h1
+<<<<<<< HEAD
             className="mt-8 max-w-5xl font-serif text-[clamp(4rem,10vw,9.5rem)] leading-[0.88] tracking-[-0.045em]"
+=======
+            className="mt-8 max-w-5xl font-serif text-[clamp(2.75rem,5.8vw,5.5rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
             id="contact-title"
           >
             {hero.title}
@@ -79,7 +83,11 @@ function InquirySection() {
               Inquiry Form
             </p>
             <h2
+<<<<<<< HEAD
               className="mt-7 font-serif text-[clamp(3rem,7vw,7rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+              className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
               id="contact-form-title"
             >
               {form.title}
@@ -150,7 +158,11 @@ function StartingPointsSection() {
         <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {contactPage.startingPoints.map((item) => (
             <article className="border border-[#f7f7f2]/16 p-6" key={item.title}>
+<<<<<<< HEAD
               <h3 className="font-serif text-[clamp(2.35rem,4vw,4.6rem)] leading-[0.92] tracking-[-0.045em] text-[#f7f7f2]">
+=======
+              <h3 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] text-[#f7f7f2]">
+>>>>>>> origin/develop
                 {item.title}
               </h3>
               <p className="mt-6 font-sans text-sm leading-7 text-[#f7f7f2]/64">
@@ -243,7 +255,11 @@ function FinalCtaSection() {
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.28em] text-[#e35d3f]">
               Begin Here
             </p>
+<<<<<<< HEAD
             <h2 className="mt-7 font-serif text-[clamp(3.2rem,7vw,7.25rem)] leading-[0.9] tracking-[-0.045em]">
+=======
+            <h2 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
               {finalCta.title}
             </h2>
             <p className="mt-7 max-w-2xl font-sans text-lg leading-8 text-[#55584f] sm:text-xl sm:leading-9">
@@ -324,7 +340,11 @@ function SectionHeading({
         {eyebrow}
       </p>
       <h2
+<<<<<<< HEAD
         className={`mt-5 font-serif text-[clamp(2.8rem,5.8vw,6rem)] leading-[0.92] tracking-[-0.045em] ${
+=======
+        className={`mt-5 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] ${
+>>>>>>> origin/develop
           light ? "text-[#f7f7f2]" : "text-[#171817]"
         }`}
       >

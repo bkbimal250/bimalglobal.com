@@ -304,7 +304,11 @@ function HeroSection() {
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.28em] text-[#e35d3f]">
             {hero.eyebrow}
           </p>
+<<<<<<< HEAD
           <h1 className="mt-8 max-w-5xl font-serif text-[clamp(3.8rem,9vw,9rem)] leading-[0.88] tracking-[-0.045em]">
+=======
+          <h1 className="mt-8 max-w-5xl font-serif text-[clamp(2.75rem,5.8vw,5.5rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
             {hero.title}
           </h1>
         </div>
@@ -528,7 +532,11 @@ function OpportunitiesSection() {
             </div>
           ) : (
             <div className="border border-[#f7f7f2]/16 p-7 sm:p-9">
+<<<<<<< HEAD
               <p className="font-serif text-[clamp(2.5rem,5.5vw,5.5rem)] leading-[0.92] tracking-[-0.045em] text-[#f7f7f2]">
+=======
+              <p className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] text-[#f7f7f2]">
+>>>>>>> origin/develop
                 Introduce yourself with the kind of technology you want to build.
               </p>
               <p className="mt-7 max-w-2xl font-sans text-base leading-8 text-[#f7f7f2]/66">
@@ -587,7 +595,11 @@ function FinalCtaSection() {
             <p className="font-sans text-xs font-semibold uppercase tracking-[0.28em] text-[#e35d3f]">
               Careers at BIMAL GLOBAL
             </p>
+<<<<<<< HEAD
             <h2 className="mt-7 font-serif text-[clamp(3.2rem,7vw,7.25rem)] leading-[0.9] tracking-[-0.045em]">
+=======
+            <h2 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
               {finalCta.title}
             </h2>
             <p className="mt-7 max-w-2xl font-sans text-lg leading-8 text-[#55584f] sm:text-xl sm:leading-9">
@@ -610,7 +622,11 @@ function FinalCtaSection() {
 function AreaCard({ area }: { area: WorkArea }) {
   const content = (
     <>
+<<<<<<< HEAD
       <h3 className="font-serif text-[clamp(2.45rem,4.4vw,4.8rem)] leading-[0.92] tracking-[-0.045em] text-[#171817]">
+=======
+      <h3 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] text-[#171817]">
+>>>>>>> origin/develop
         {area.discipline}
       </h3>
       <p className="mt-6 font-sans text-sm leading-7 text-[#55584f]">
@@ -619,7 +635,11 @@ function AreaCard({ area }: { area: WorkArea }) {
       <div className="mt-8 flex flex-wrap gap-2">
         {area.topics.map((topic) => (
           <span
+<<<<<<< HEAD
             className="border border-[#171817]/16 px-3 py-2 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.14em] text-[#55584f]"
+=======
+            className="border border-[#171817]/16 px-3 py-2 font-sans text-[11px] font-semibold uppercase tracking-[0.14em] text-[#55584f]"
+>>>>>>> origin/develop
             key={topic}
           >
             {topic}
@@ -718,7 +738,11 @@ function SectionHeading({
         {eyebrow}
       </p>
       <h2
+<<<<<<< HEAD
         className={`mt-5 font-serif text-[clamp(2.8rem,5.8vw,6rem)] leading-[0.92] tracking-[-0.045em] ${
+=======
+        className={`mt-5 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] ${
+>>>>>>> origin/develop
           light ? "text-[#f7f7f2]" : "text-[#171817]"
         }`}
       >

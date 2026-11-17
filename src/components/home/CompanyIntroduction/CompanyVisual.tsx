@@ -14,12 +14,20 @@ export function CompanyVisual() {
       }}
     >
       <div className="absolute inset-0 opacity-35 [background-image:linear-gradient(rgba(247,247,242,0.2)_1px,transparent_1px),linear-gradient(90deg,rgba(247,247,242,0.16)_1px,transparent_1px)] [background-size:3.5rem_3.5rem]" />
+<<<<<<< HEAD
       <div className="absolute inset-x-7 top-7 flex items-center justify-between border-t border-[#f7f7f2]/30 pt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+=======
+      <div className="absolute inset-x-7 top-7 flex items-center justify-between border-t border-[#f7f7f2]/30 pt-4 font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+>>>>>>> origin/develop
         <span>Global systems</span>
         <span>India / Nepal</span>
       </div>
       <div className="absolute bottom-0 right-0 h-32 w-32 border-l border-t border-[#f7f7f2]/25 sm:h-44 sm:w-44" />
+<<<<<<< HEAD
       <div className="absolute bottom-7 left-7 max-w-[13rem] font-sans text-[0.62rem] font-medium uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/75 sm:bottom-9 sm:left-9">
+=======
+      <div className="absolute bottom-7 left-7 max-w-[13rem] font-sans text-[11px] font-medium uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/75 sm:bottom-9 sm:left-9">
+>>>>>>> origin/develop
         Bimal Global headquarters
       </div>
       <span className="absolute right-7 top-24 h-3 w-3 bg-[#e35d3f] sm:right-9" />

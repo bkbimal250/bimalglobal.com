@@ -73,7 +73,11 @@ function Hero() {
             {hero.eyebrow}
           </p>
           <h1
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3.35rem,7.8vw,8.5rem)] leading-[0.9] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+=======
+            className="mt-7 font-serif text-[clamp(2.75rem,5.8vw,5.5rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+>>>>>>> origin/develop
             id="cloud-infrastructure-title"
           >
             {hero.title}
@@ -111,7 +115,11 @@ function Overview() {
             Overview
           </p>
           <h2
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+            className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
             id="infrastructure-overview-title"
           >
             {overview.title}
@@ -143,7 +151,11 @@ function CapabilityGrid() {
           id="infrastructure-lifecycle-capabilities-title"
           title="Infrastructure across the technology lifecycle"
         />
+<<<<<<< HEAD
         <div className="mt-12 grid grid-cols-1 border-t border-[#171817]/15 lg:grid-cols-2">
+=======
+        <div className="mt-10 grid grid-cols-1 gap-x-10 border-t border-[#171817]/15 lg:grid-cols-2 lg:gap-x-14">
+>>>>>>> origin/develop
           {cloudInfrastructurePage.capabilities.map((item, index) => (
             <EditorialItem index={index} item={item} key={item.title} />
           ))}
@@ -163,7 +175,11 @@ function CloudArchitecture() {
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
             Cloud Architecture
           </p>
+<<<<<<< HEAD
           <h2 className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]">
+=======
+          <h2 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
             {section.title}
           </h2>
           <div className="mt-8 grid gap-6 font-sans text-lg leading-8 text-[#f7f7f2]/66 sm:text-xl sm:leading-9">
@@ -220,7 +236,11 @@ function InfrastructureSection({
         <div
           className={`${flipped ? "lg:order-1" : ""} border-y ${dark ? "border-[#f7f7f2]/15" : "border-[#171817]/15"} py-12 sm:py-16 lg:py-20`}
         >
+<<<<<<< HEAD
           <h2 className="font-serif text-[clamp(2.85rem,6vw,6.6rem)] leading-[0.94] tracking-[-0.045em]">
+=======
+          <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
             {section.title}
           </h2>
           <div
@@ -271,7 +291,11 @@ function FlowFeature({
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
             {eyebrow}
           </p>
+<<<<<<< HEAD
           <h2 className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]">
+=======
+          <h2 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
             {section.title}
           </h2>
           <p className={`mt-8 max-w-2xl font-sans text-base leading-8 sm:text-lg sm:leading-9 ${dark ? "text-[#f7f7f2]/66" : "text-[#171817]/66"}`}>
@@ -314,7 +338,11 @@ function EnvironmentDesign() {
               <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
                 0{index + 1}
               </p>
+<<<<<<< HEAD
               <h3 className="mt-7 font-serif text-[clamp(2.2rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+=======
+              <h3 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
                 {item.title}
               </h3>
               <p className="mt-5 font-sans text-sm leading-7 text-[#171817]/62 sm:text-base sm:leading-8">
@@ -342,7 +370,11 @@ function Observability() {
             Observability
           </p>
           <h2
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+            className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
             id="observability-title"
           >
             {observability.title}
@@ -380,7 +412,11 @@ function ConnectedCapabilities() {
         <div className="mt-12 grid grid-cols-1 gap-5 lg:grid-cols-3">
           {cloudInfrastructurePage.connections.map((item) => (
             <article className="border border-[#171817]/15 p-7 sm:p-8" key={item.title}>
+<<<<<<< HEAD
               <h3 className="font-serif text-[clamp(2.2rem,4vw,4.25rem)] leading-none tracking-[-0.04em]">
+=======
+              <h3 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
                 {item.title}
               </h3>
               <p className="mt-6 font-sans text-sm leading-7 text-[#171817]/64 sm:text-base sm:leading-8">
@@ -404,7 +440,11 @@ function Lifecycle() {
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <h2
+<<<<<<< HEAD
           className="max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+          className="max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
           id="infrastructure-lifecycle-title"
         >
           From architecture to continuous operation
@@ -416,10 +456,17 @@ function Lifecycle() {
               key={stage.number}
               style={{ animationDelay: `${160 + index * 60}ms` }}
             >
+<<<<<<< HEAD
               <p className="font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
                 {stage.number}
               </p>
               <h3 className="mt-7 font-serif text-[clamp(2.1rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+=======
+              <p className="font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
+                {stage.number}
+              </p>
+              <h3 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
                 {stage.title}
               </h3>
               <p className="mt-5 font-sans text-sm leading-7 text-[#f7f7f2]/62">
@@ -463,7 +510,11 @@ function TechnologyDomains() {
     >
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 border-y border-[#171817]/15 py-14 lg:grid-cols-[minmax(0,0.62fr)_minmax(24rem,1fr)] lg:gap-20 lg:py-20">
         <h2
+<<<<<<< HEAD
           className="font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+          className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
           id="infrastructure-technology-title"
         >
           Infrastructure technology domains
@@ -488,7 +539,11 @@ function WhenToWork() {
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <h2
+<<<<<<< HEAD
           className="max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+          className="max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
           id="when-infrastructure-title"
         >
           When infrastructure becomes a strategic concern
@@ -511,7 +566,11 @@ function EngagementModels() {
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <h2
+<<<<<<< HEAD
           className="max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+          className="max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
           id="infrastructure-engagement-title"
         >
           Ways to build and improve infrastructure
@@ -525,7 +584,11 @@ function EngagementModels() {
               <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
                 0{index + 1}
               </p>
+<<<<<<< HEAD
               <h3 className="mt-8 font-serif text-[clamp(2.5rem,5vw,5.25rem)] leading-none tracking-[-0.04em]">
+=======
+              <h3 className="mt-8 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
                 {item.title}
               </h3>
               <p className="mt-7 font-sans text-sm leading-7 text-[#171817]/64 sm:text-base sm:leading-8">
@@ -554,7 +617,11 @@ function Scenarios() {
             Illustrative infrastructure scenarios - not client case studies.
           </p>
           <h2
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+            className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
             id="infrastructure-scenarios-title"
           >
             What infrastructure engineering can support
@@ -574,7 +641,11 @@ function RelatedCapabilities() {
     >
       <div className="mx-auto w-full max-w-[1440px]">
         <h2
+<<<<<<< HEAD
           className="max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+          className="max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
           id="related-infrastructure-capabilities-title"
         >
           Related capabilities
@@ -624,7 +695,11 @@ function FinalCta() {
   return (
     <section className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(22rem,0.55fr)] lg:items-end lg:gap-20">
+<<<<<<< HEAD
         <h2 className="font-serif text-[clamp(3.5rem,8vw,8.75rem)] leading-[0.9] tracking-[-0.045em]">
+=======
+        <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
           {finalCta.title}
         </h2>
         <div>
@@ -707,6 +782,7 @@ function EditorialItem({
 }) {
   return (
     <article
+<<<<<<< HEAD
       className={`group grid gap-5 border-b py-8 transition-colors sm:gap-8 ${compact ? "" : "sm:grid-cols-[5rem_minmax(0,0.55fr)_minmax(0,1fr)] sm:py-10 lg:px-5"} ${dark ? "border-[#f7f7f2]/15 hover:border-[#e35d3f]/60" : "border-[#171817]/15 hover:border-[#e35d3f]/60 hover:bg-[#171817]/[0.025]"}`}
     >
       <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
@@ -718,6 +794,21 @@ function EditorialItem({
       <p className={`max-w-xl font-sans text-sm leading-7 sm:text-base sm:leading-8 ${dark ? "text-[#f7f7f2]/62" : "text-[#171817]/62"}`}>
         {item.description}
       </p>
+=======
+      className={`group grid grid-cols-[2rem_minmax(0,1fr)] items-start gap-4 border-b py-7 transition-colors sm:gap-5 ${compact ? "" : "sm:py-8"} ${dark ? "border-[#f7f7f2]/15 hover:border-[#e35d3f]/60" : "border-[#171817]/15 hover:border-[#e35d3f]/60 hover:bg-[#171817]/[0.025]"}`}
+    >
+      <p className="pt-1 font-sans text-xs font-semibold uppercase tracking-[0.16em] text-[#c34228]">
+        0{index + 1}
+      </p>
+      <div className="min-w-0">
+      <h3 className="font-serif text-[clamp(1.375rem,2vw,1.875rem)] leading-[1.2] tracking-[-0.025em] transition-colors group-hover:text-[#e35d3f]">
+        {item.title}
+      </h3>
+      <p className={`mt-3 max-w-xl font-sans text-sm leading-7 sm:text-base ${dark ? "text-[#f7f7f2]/70" : "text-[#171817]/70"}`}>
+        {item.description}
+      </p>
+      </div>
+>>>>>>> origin/develop
     </article>
   );
 }
@@ -728,7 +819,11 @@ function CapabilityLink({ item }: { item: RelatedCapability }) {
       className="group border border-[#f7f7f2]/15 p-7 transition-colors hover:border-[#e35d3f]/70 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#e35d3f] sm:p-8"
       href={item.href}
     >
+<<<<<<< HEAD
       <h3 className="font-serif text-[clamp(2.2rem,4vw,4.25rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+=======
+      <h3 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em] transition-colors group-hover:text-[#e35d3f]">
+>>>>>>> origin/develop
         {item.title}
       </h3>
       <p className="mt-6 font-sans text-sm leading-7 text-[#f7f7f2]/64 sm:text-base sm:leading-8">
@@ -778,7 +873,11 @@ function FocusList({
 }) {
   return (
     <ul
+<<<<<<< HEAD
       className={`mt-8 flex flex-wrap gap-x-5 gap-y-3 border-t pt-6 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] ${dark ? "border-[#f7f7f2]/15 text-[#f7f7f2]/50" : "border-[#171817]/15 text-[#171817]/48"}`}
+=======
+      className={`mt-8 flex flex-wrap gap-x-5 gap-y-3 border-t pt-6 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] ${dark ? "border-[#f7f7f2]/15 text-[#f7f7f2]/50" : "border-[#171817]/15 text-[#171817]/48"}`}
+>>>>>>> origin/develop
     >
       {items.map((item) => (
         <li key={item}>{item}</li>
@@ -792,7 +891,11 @@ function TagCloud({ dark = false, items }: { dark?: boolean; items: readonly str
     <div className="mt-8 flex flex-wrap gap-3">
       {items.map((item) => (
         <span
+<<<<<<< HEAD
           className={`border px-4 py-3 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.2em] ${dark ? "border-[#f7f7f2]/15 text-[#f7f7f2]/58" : "border-[#171817]/15 text-[#171817]/58"}`}
+=======
+          className={`border px-4 py-3 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] ${dark ? "border-[#f7f7f2]/15 text-[#f7f7f2]/58" : "border-[#171817]/15 text-[#171817]/58"}`}
+>>>>>>> origin/develop
           key={item}
         >
           {item}
@@ -817,7 +920,11 @@ function SectionHeading({
         {eyebrow}
       </p>
       <h2
+<<<<<<< HEAD
         className="mt-7 max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]"
+=======
+        className="mt-7 max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]"
+>>>>>>> origin/develop
         id={id}
       >
         {title}
@@ -863,12 +970,20 @@ function VisualPanel({
         aria-hidden="true"
         className="absolute bottom-16 right-10 h-32 w-32 border-[1.5rem] border-[#e35d3f] opacity-90 sm:h-44 sm:w-44"
       />
+<<<<<<< HEAD
       <div className="absolute inset-x-7 top-7 flex items-center justify-between gap-5 border-t border-[#f7f7f2]/30 pt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+=======
+      <div className="absolute inset-x-7 top-7 flex items-center justify-between gap-5 border-t border-[#f7f7f2]/30 pt-4 font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+>>>>>>> origin/develop
         <span>{label}</span>
         <span className="text-right">{meta}</span>
       </div>
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
+<<<<<<< HEAD
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
+=======
+        <p className="max-w-xs text-[11px] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
+>>>>>>> origin/develop
           Visual
         </p>
       </div>

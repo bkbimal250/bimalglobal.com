@@ -51,7 +51,11 @@ function PresenceHero() {
           </p>
           <h1
             id="presence-page-title"
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(3.5rem,8vw,8.75rem)] leading-[0.9] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+=======
+            className="mt-7 font-serif text-[clamp(2.75rem,5.8vw,5.5rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+>>>>>>> origin/develop
           >
             {hero.heading}
             <span className="block text-[#e35d3f]">{hero.highlight}</span>
@@ -134,14 +138,22 @@ function CountrySection({
           </p>
           <h2
             id={`${country.code.toLowerCase()}-presence-title`}
+<<<<<<< HEAD
             className="mt-7 font-serif text-[clamp(2.85rem,6vw,6.6rem)] leading-[0.94] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+=======
+            className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+>>>>>>> origin/develop
           >
             {country.heading}
           </h2>
           <p className="mt-8 max-w-xl font-sans text-lg leading-8 text-[#171817]/66 sm:text-xl sm:leading-9">
             {country.description}
           </p>
+<<<<<<< HEAD
           <p className="mt-8 inline-flex border-l border-[#171817]/25 pl-6 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#171817]/55">
+=======
+          <p className="mt-8 inline-flex border-l border-[#171817]/25 pl-6 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-[#171817]/55">
+>>>>>>> origin/develop
             {country.country} / {country.status}
           </p>
         </div>
@@ -157,7 +169,11 @@ function IndiaNepalConnection() {
     <section className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36">
       <div className="mx-auto w-full max-w-[1440px]">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[minmax(0,0.72fr)_minmax(22rem,0.58fr)] lg:items-end lg:gap-20">
+<<<<<<< HEAD
           <h2 className="font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+=======
+          <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+>>>>>>> origin/develop
             {connection.heading}
             <span className="block text-[#e35d3f]">{connection.highlight}</span>
           </h2>
@@ -175,7 +191,11 @@ function IndiaNepalConnection() {
                 <div className="h-px w-full bg-[#f7f7f2]/24" />
                 <div className="flex flex-wrap justify-center gap-3">
                   {connection.disciplines.map((item) => (
+<<<<<<< HEAD
                     <span className="border border-[#f7f7f2]/16 px-4 py-2 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#f7f7f2]/70" key={item}>
+=======
+                    <span className="border border-[#f7f7f2]/16 px-4 py-2 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-[#f7f7f2]/70" key={item}>
+>>>>>>> origin/develop
                       {item}
                     </span>
                   ))}
@@ -195,10 +215,17 @@ function CountryNode({ label }: { label: string }) {
   return (
     <div className="grid min-h-36 place-items-center border border-[#f7f7f2]/15 bg-[#202320] p-6">
       <div className="text-center">
+<<<<<<< HEAD
         <p className="font-serif text-[clamp(3rem,7vw,6.5rem)] leading-none tracking-[-0.04em]">
           {label}
         </p>
         <p className="mt-5 font-sans text-[0.62rem] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
+=======
+        <p className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+          {label}
+        </p>
+        <p className="mt-5 font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#e35d3f]">
+>>>>>>> origin/develop
           Operational Presence
         </p>
       </div>
@@ -237,7 +264,11 @@ function MarketPerspective() {
   return (
     <section className="px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16 lg:pb-36">
       <div className="mx-auto w-full max-w-[1440px]">
+<<<<<<< HEAD
         <h2 className="max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+=======
+        <h2 className="max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+>>>>>>> origin/develop
           {marketPerspective.heading}
           <span className="block text-[#e35d3f]">{marketPerspective.highlight}</span>
         </h2>
@@ -266,7 +297,11 @@ function ConceptItem({
       <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f]">
         0{index + 1}
       </p>
+<<<<<<< HEAD
       <h3 className="mt-8 font-serif text-[clamp(2.5rem,5vw,5.25rem)] leading-none tracking-[-0.04em]">
+=======
+      <h3 className="mt-8 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em]">
+>>>>>>> origin/develop
         {item.title}
       </h3>
       <p className="mt-7 max-w-md font-sans text-sm leading-7 text-[#171817]/64 sm:text-base sm:leading-8">
@@ -283,7 +318,11 @@ function PresenceVisualization() {
     <section className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.7fr)_minmax(24rem,0.85fr)] lg:items-center lg:gap-20 xl:gap-28">
         <div>
+<<<<<<< HEAD
           <h2 className="font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]">
+=======
+          <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
             {visualization.heading}
             <span className="block text-[#e35d3f]">{visualization.highlight}</span>
           </h2>
@@ -299,7 +338,11 @@ function PresenceVisualization() {
             <div className="absolute left-[55%] top-[46%] h-px w-[13%] -rotate-[24deg] bg-[#e35d3f]/70" />
             <div className="absolute left-1/2 top-1/2 h-64 w-64 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#f7f7f2]/16 sm:h-80 sm:w-80" />
             <div className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#f7f7f2]/12 sm:h-56 sm:w-56" />
+<<<<<<< HEAD
             <p className="absolute bottom-0 left-0 max-w-xs font-sans text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/58">
+=======
+            <p className="absolute bottom-0 left-0 max-w-xs font-sans text-[11px] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/58">
+>>>>>>> origin/develop
               Global collaboration field. No additional office locations implied.
             </p>
           </div>
@@ -313,7 +356,11 @@ function MapMarker({ className, label }: { className: string; label: string }) {
   return (
     <div className={`absolute z-10 ${className}`}>
       <span className="block h-4 w-4 bg-[#e35d3f]" />
+<<<<<<< HEAD
       <span className="mt-3 block whitespace-nowrap font-sans text-[0.62rem] font-semibold uppercase tracking-[0.2em] text-[#f7f7f2]">
+=======
+      <span className="mt-3 block whitespace-nowrap font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-[#f7f7f2]">
+>>>>>>> origin/develop
         {label}
       </span>
       <span className="mt-1 block whitespace-nowrap font-sans text-[0.56rem] font-semibold uppercase tracking-[0.18em] text-[#f7f7f2]/52">
@@ -359,7 +406,11 @@ function FuturePresence() {
   return (
     <section className="px-6 pb-20 sm:px-10 sm:pb-28 lg:px-16 lg:pb-36">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-10 border-y border-[#171817]/15 py-14 lg:grid-cols-[minmax(0,0.86fr)_minmax(22rem,0.58fr)] lg:items-end lg:gap-20 lg:py-20">
+<<<<<<< HEAD
         <h2 className="font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+=======
+        <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_ease-out_both]">
+>>>>>>> origin/develop
           {future.heading}
         </h2>
         <div className="grid gap-7 font-sans text-base leading-8 text-[#171817]/68 sm:text-lg sm:leading-9">
@@ -399,7 +450,11 @@ function MetricItem({
       className="border-b border-[#171817]/15 py-8 sm:px-7 lg:border-b-0 lg:border-r lg:py-10 lg:last:border-r-0 motion-safe:animate-[hero-rise_800ms_ease-out_both]"
       style={{ animationDelay: `${160 + index * 70}ms` }}
     >
+<<<<<<< HEAD
       <p className="font-serif text-[clamp(2.75rem,5.5vw,6rem)] leading-none tracking-[-0.04em] text-[#e35d3f]">
+=======
+      <p className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em] text-[#e35d3f]">
+>>>>>>> origin/develop
         {metric.value}
       </p>
       <p className="mt-5 max-w-xs font-sans text-[0.68rem] font-semibold uppercase leading-6 tracking-[0.2em] text-[#171817]/56">
@@ -416,7 +471,11 @@ function CompanyConnection() {
     <section className="bg-[#171817] px-6 py-20 text-[#f7f7f2] sm:px-10 sm:py-28 lg:px-16 lg:py-36">
       <div className="mx-auto grid w-full max-w-[1440px] grid-cols-1 gap-12 lg:grid-cols-[minmax(0,0.72fr)_minmax(24rem,0.85fr)] lg:items-center lg:gap-20 xl:gap-28">
         <div>
+<<<<<<< HEAD
           <h2 className="font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em]">
+=======
+          <h2 className="font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em]">
+>>>>>>> origin/develop
             {capabilities.heading}
             <span className="block text-[#e35d3f]">{capabilities.highlight}</span>
           </h2>
@@ -465,7 +524,11 @@ function PresenceCta() {
           <p className="font-sans text-xs font-semibold uppercase tracking-[0.24em] text-[#e35d3f] motion-safe:animate-[hero-rise_700ms_ease-out_both]">
             {cta.eyebrow}
           </p>
+<<<<<<< HEAD
           <h2 className="mt-7 font-serif text-[clamp(3.5rem,8vw,8.75rem)] leading-[0.9] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]">
+=======
+          <h2 className="mt-7 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]">
+>>>>>>> origin/develop
             {cta.heading}
             <span className="block text-[#e35d3f]">{cta.highlight}</span>
           </h2>
@@ -507,7 +570,11 @@ function SectionHeading({
         {eyebrow}
       </p>
       <h2
+<<<<<<< HEAD
         className="mt-7 max-w-5xl font-serif text-[clamp(3rem,7vw,7.25rem)] leading-[0.92] tracking-[-0.045em] text-[#171817] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+=======
+        className="mt-7 max-w-5xl font-serif text-[clamp(2.125rem,4vw,4rem)] leading-[1.08] tracking-[-0.045em] text-[#171817] motion-safe:animate-[hero-rise_800ms_120ms_ease-out_both]"
+>>>>>>> origin/develop
         id={id}
       >
         {heading}
@@ -550,12 +617,20 @@ function VisualPanel({
       <div aria-hidden="true" className="absolute left-1/2 top-1/2 h-[17rem] w-[17rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#f7f7f2]/20 sm:h-[25rem] sm:w-[25rem]" />
       <div aria-hidden="true" className="absolute left-1/2 top-1/2 h-[10rem] w-[10rem] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#f7f7f2]/14 sm:h-[16rem] sm:w-[16rem]" />
       <div aria-hidden="true" className="absolute bottom-16 right-10 h-32 w-32 border-[1.5rem] border-[#e35d3f] opacity-90 sm:h-44 sm:w-44" />
+<<<<<<< HEAD
       <div className="absolute inset-x-7 top-7 flex items-center justify-between border-t border-[#f7f7f2]/30 pt-4 font-sans text-[0.58rem] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+=======
+      <div className="absolute inset-x-7 top-7 flex items-center justify-between border-t border-[#f7f7f2]/30 pt-4 font-sans text-[11px] font-semibold uppercase tracking-[0.22em] text-[#f7f7f2]/70 sm:inset-x-9 sm:top-9">
+>>>>>>> origin/develop
         <span>{label}</span>
         <span>{meta}</span>
       </div>
       <div className="absolute inset-x-7 bottom-7 font-sans sm:inset-x-9 sm:bottom-9">
+<<<<<<< HEAD
         <p className="max-w-xs text-[0.62rem] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
+=======
+        <p className="max-w-xs text-[11px] font-semibold uppercase leading-5 tracking-[0.22em] text-[#f7f7f2]/60">
+>>>>>>> origin/develop
           Visual
         </p>
       </div>

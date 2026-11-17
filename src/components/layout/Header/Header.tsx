@@ -58,12 +58,20 @@ export function Header() {
 
   return (
     <header
+<<<<<<< HEAD
       className={`fixed inset-x-0 top-0 z-50 px-4 pt-4 transition-all duration-300 sm:px-6 lg:px-8 ${
+=======
+      className={`fixed inset-x-0 top-0 z-50 px-4 pt-4 transition-all duration-300 sm:px-6 xl:px-8 ${
+>>>>>>> origin/develop
         scrolled ? "pt-3" : ""
       }`}
     >
       <div
+<<<<<<< HEAD
         className={`relative z-10 mx-auto max-w-[1480px] border px-4 py-3 transition-all duration-300 sm:px-6 ${
+=======
+        className={`relative z-10 mx-auto max-w-[1480px] rounded-xl border shadow-[0_6px_28px_-12px_rgba(24,32,31,0.16)] px-4 py-3 transition-all duration-300 sm:px-6 ${
+>>>>>>> origin/develop
           scrolled || mobileOpen
             ? "border-[#171817]/15 bg-[#f7f7f2]/94 backdrop-blur-md"
             : "border-transparent bg-[#f7f7f2]/72 backdrop-blur-sm"
@@ -74,7 +82,11 @@ export function Header() {
 
           <nav
             aria-label="Primary navigation"
+<<<<<<< HEAD
             className="hidden items-center gap-1 lg:flex"
+=======
+            className="hidden items-center gap-1 xl:flex"
+>>>>>>> origin/develop
           >
             {navigation.map((item) =>
               item.items ? (
@@ -97,7 +109,11 @@ export function Header() {
             )}
           </nav>
 
+<<<<<<< HEAD
           <div className="hidden items-center gap-4 lg:flex">
+=======
+          <div className="hidden items-center gap-4 xl:flex">
+>>>>>>> origin/develop
             <Link
               className="inline-flex min-h-11 items-center justify-center bg-[#171817] px-5 font-sans text-sm font-semibold text-[#f7f7f2] transition-colors hover:bg-[#e35d3f] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817]"
               href={primaryNavigationCta.href}
@@ -113,7 +129,11 @@ export function Header() {
             aria-controls="mobile-navigation"
             aria-expanded={mobileOpen}
             aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+<<<<<<< HEAD
             className="inline-flex min-h-11 items-center justify-center border border-[#171817]/20 px-4 font-sans text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-[#171817] transition-colors hover:border-[#171817] hover:bg-[#171817]/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817] lg:hidden"
+=======
+            className="inline-flex min-h-11 items-center justify-center border border-[#171817]/20 px-4 font-sans text-[11px] font-semibold uppercase tracking-[0.2em] text-[#171817] transition-colors hover:border-[#171817] hover:bg-[#171817]/5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817] xl:hidden"
+>>>>>>> origin/develop
             onClick={() => setMobileOpen((value) => !value)}
             type="button"
           >
@@ -255,7 +275,11 @@ function MobileNavigation({
   return (
     <div
       aria-hidden={!open}
+<<<<<<< HEAD
       className={`fixed inset-0 z-0 bg-[#f7f7f2] px-6 pb-8 pt-28 transition duration-300 motion-reduce:transition-none lg:hidden ${
+=======
+      className={`fixed inset-0 z-0 bg-[#f7f7f2] px-6 pb-8 pt-28 transition duration-300 motion-reduce:transition-none xl:hidden ${
+>>>>>>> origin/develop
         open
           ? "pointer-events-auto translate-y-0 opacity-100"
           : "pointer-events-none -translate-y-3 opacity-0"
@@ -328,7 +352,11 @@ function MobileNavigationGroup({
       <button
         aria-controls={panelId}
         aria-expanded={expanded}
+<<<<<<< HEAD
         className={`flex w-full items-center justify-between py-5 text-left font-serif text-[clamp(2.25rem,9vw,4rem)] leading-none tracking-[-0.04em] transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817] ${
+=======
+        className={`flex w-full items-center justify-between py-5 text-left font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em] transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817] ${
+>>>>>>> origin/develop
           active ? "text-[#e35d3f]" : "text-[#171817]"
         }`}
         onClick={onToggle}
@@ -386,7 +414,11 @@ function MobileNavigationLink({
   return (
     <Link
       aria-current={active ? "page" : undefined}
+<<<<<<< HEAD
       className={`group grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b border-[#171817]/12 py-6 font-serif text-[clamp(2.25rem,9vw,4rem)] leading-none tracking-[-0.04em] outline-none transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817] ${
+=======
+      className={`group grid grid-cols-[minmax(0,1fr)_auto] items-center gap-4 border-b border-[#171817]/12 py-6 font-serif text-[clamp(2.125rem,4vw,4rem)] leading-none tracking-[-0.04em] outline-none transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#171817] ${
+>>>>>>> origin/develop
         active ? "text-[#e35d3f]" : "text-[#171817] hover:text-[#e35d3f]"
       }`}
       href={item.href}
